@@ -10,8 +10,16 @@
 
 @implementation KGWindow
 
+$synthesize(delegate);
+
 - (void)remoteControlReceivedWithEvent:(UIEvent *)event {
     [super remoteControlReceivedWithEvent:event];
+    
+    if (self.delegate) {
+        if ([self.delegate respondsToSelector:@selector(window:remoteControlReceivedWithEvent:)]) {
+            [self.delegate window:self remoteControlReceivedWithEvent:event];
+        }
+    }
     
 	// Handle Remote Control Event
 	if (event.type == UIEventTypeRemoteControl) {
