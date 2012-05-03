@@ -10,7 +10,7 @@
 
 @implementation KGWindow
 
-$synthesize(delegate);
+@synthesize delegate = delegate_;
 
 - (void)remoteControlReceivedWithEvent:(UIEvent *)event {
     [super remoteControlReceivedWithEvent:event];

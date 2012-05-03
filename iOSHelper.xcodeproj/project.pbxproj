@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC31C1151552837C009AC76C /* UIView+Userdata.m in Sources */ = {isa = PBXBuildFile; fileRef = FC31C1141552837C009AC76C /* UIView+Userdata.m */; };
 		FC43A5EA15511BBA00310EAD /* UIView+Sizes.m in Sources */ = {isa = PBXBuildFile; fileRef = FC43A5E915511BBA00310EAD /* UIView+Sizes.m */; };
 		FCE6A5D7154E7B2D0027A21A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE6A5D6154E7B2D0027A21A /* UIKit.framework */; };
 		FCE6A5D9154E7B2D0027A21A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE6A5D8154E7B2D0027A21A /* Foundation.framework */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC31C1131552837C009AC76C /* UIView+Userdata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Userdata.h"; sourceTree = "<group>"; };
+		FC31C1141552837C009AC76C /* UIView+Userdata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Userdata.m"; sourceTree = "<group>"; };
 		FC43A5E815511BBA00310EAD /* UIView+Sizes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Sizes.h"; sourceTree = "<group>"; };
 		FC43A5E915511BBA00310EAD /* UIView+Sizes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Sizes.m"; sourceTree = "<group>"; };
 		FCE6A5D2154E7B2D0027A21A /* iOSHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +114,8 @@
 				FCE6A5FE154E7CB90027A21A /* NSFileManager+KGiOSHelper.m */,
 				FCFDDD9715513B8000EBD678 /* KGWindow.h */,
 				FCFDDD9815513B8000EBD678 /* KGWindow.m */,
+				FC31C1131552837C009AC76C /* UIView+Userdata.h */,
+				FC31C1141552837C009AC76C /* UIView+Userdata.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -182,6 +187,7 @@
 				FCE6A5FF154E7CB90027A21A /* NSFileManager+KGiOSHelper.m in Sources */,
 				FC43A5EA15511BBA00310EAD /* UIView+Sizes.m in Sources */,
 				FCFDDD9915513B8000EBD678 /* KGWindow.m in Sources */,
+				FC31C1151552837C009AC76C /* UIView+Userdata.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
