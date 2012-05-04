@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 
 #import "NSFileManager+KGiOSHelper.h"
+#import "KGTimeConverter.h"
 
 @interface AppDelegate ()
 
@@ -32,14 +33,21 @@
 }
 
 - (void)test {
-    NSLog(@"file exists: %i", [NSFileManager fileExistsAtNoBackupDirectory:@"muh"]);
+//    NSLog(@"file exists: %i", [NSFileManager fileExistsAtNoBackupDirectory:@"muh"]);
+//    
+//    NSLog(@"filepath: %@", [NSFileManager documentsNoBackupDirectoryPath]);
+//    
+//    NSData *data = [@"blablabla" dataUsingEncoding:NSUTF8StringEncoding];
+//    NSLog(@"saved file to nobackupdir: %i", [NSFileManager writeDataToNoBackupDirectory:data filename:@"muh"]);
+//    
+//    NSLog(@"file exists: %i", [NSFileManager fileExistsAtNoBackupDirectory:@"muh"]);
     
-    NSLog(@"filepath: %@", [NSFileManager documentsNoBackupDirectoryPath]);
+    KGTimeConverter *t = [KGTimeConverter timeConverterWithNumber:[NSNumber numberWithFloat:86401]];
+    t.timeUnit = KGTimeUnitSecond;
+    t.timeFormat = KGTimeFormatDaysHoursMinutesSeconds;
     
-    NSData *data = [@"blablabla" dataUsingEncoding:NSUTF8StringEncoding];
-    NSLog(@"saved file to nobackupdir: %i", [NSFileManager writeDataToNoBackupDirectory:data filename:@"muh"]);
-    
-    NSLog(@"file exists: %i", [NSFileManager fileExistsAtNoBackupDirectory:@"muh"]);
+    NSLog(@"milliseconds: %f, seconds: %f, minutes: %f, hours: %f, days: %f", t.milliseconds, t.seconds, t.minutes, t.hours, t.days);
+    NSLog(@"timeString: %@", t.timeString);
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		FC31C1151552837C009AC76C /* UIView+Userdata.m in Sources */ = {isa = PBXBuildFile; fileRef = FC31C1141552837C009AC76C /* UIView+Userdata.m */; };
 		FC43A5EA15511BBA00310EAD /* UIView+Sizes.m in Sources */ = {isa = PBXBuildFile; fileRef = FC43A5E915511BBA00310EAD /* UIView+Sizes.m */; };
+		FC91CFEE1553D5580052075B /* KGTimeConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = FC91CFED1553D5570052075B /* KGTimeConverter.m */; };
 		FCE6A5D7154E7B2D0027A21A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE6A5D6154E7B2D0027A21A /* UIKit.framework */; };
 		FCE6A5D9154E7B2D0027A21A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE6A5D8154E7B2D0027A21A /* Foundation.framework */; };
 		FCE6A5DB154E7B2D0027A21A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE6A5DA154E7B2D0027A21A /* CoreGraphics.framework */; };
@@ -24,6 +25,8 @@
 		FC31C1141552837C009AC76C /* UIView+Userdata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Userdata.m"; sourceTree = "<group>"; };
 		FC43A5E815511BBA00310EAD /* UIView+Sizes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Sizes.h"; sourceTree = "<group>"; };
 		FC43A5E915511BBA00310EAD /* UIView+Sizes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Sizes.m"; sourceTree = "<group>"; };
+		FC91CFEC1553D5570052075B /* KGTimeConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGTimeConverter.h; sourceTree = "<group>"; };
+		FC91CFED1553D5570052075B /* KGTimeConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGTimeConverter.m; sourceTree = "<group>"; };
 		FCE6A5D2154E7B2D0027A21A /* iOSHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCE6A5D6154E7B2D0027A21A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FCE6A5D8154E7B2D0027A21A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -116,6 +119,8 @@
 				FCFDDD9815513B8000EBD678 /* KGWindow.m */,
 				FC31C1131552837C009AC76C /* UIView+Userdata.h */,
 				FC31C1141552837C009AC76C /* UIView+Userdata.m */,
+				FC91CFEC1553D5570052075B /* KGTimeConverter.h */,
+				FC91CFED1553D5570052075B /* KGTimeConverter.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -188,6 +193,7 @@
 				FC43A5EA15511BBA00310EAD /* UIView+Sizes.m in Sources */,
 				FCFDDD9915513B8000EBD678 /* KGWindow.m in Sources */,
 				FC31C1151552837C009AC76C /* UIView+Userdata.m in Sources */,
+				FC91CFEE1553D5580052075B /* KGTimeConverter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
