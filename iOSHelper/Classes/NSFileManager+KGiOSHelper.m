@@ -41,4 +41,9 @@
     return [[NSFileManager defaultManager] fileExistsAtPath:filepath];
 }
 
++ (NSData *)dataInNoBackupDirectoryWithFilename:(NSString *)filename {
+    NSString *filepath = [[self documentsNoBackupDirectoryPath] stringByAppendingPathComponent:filename];
+    return [NSData dataWithContentsOfFile:filepath];
+}
+
 @end

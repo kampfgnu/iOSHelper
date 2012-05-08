@@ -13,5 +13,6 @@
 + (NSString *)documentsNoBackupDirectoryPath;
 + (BOOL)writeDataToNoBackupDirectory:(NSData *)data filename:(NSString *)filename;
 + (BOOL)fileExistsAtNoBackupDirectory:(NSString *)filename;
++ (NSData *)dataInNoBackupDirectoryWithFilename:(NSString *)filename;
 
 @end
