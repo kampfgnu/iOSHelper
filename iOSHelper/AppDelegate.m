@@ -10,6 +10,9 @@
 
 #import "NSFileManager+KGiOSHelper.h"
 #import "KGTimeConverter.h"
+#import "KGAccounts.h"
+#import <Accounts/ACAccount.h>
+#import <Accounts/ACAccountType.h>
 
 @interface AppDelegate ()
 
@@ -25,10 +28,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    [self.window makeKeyAndVisible];
 
     [self test];
     
-    [self.window makeKeyAndVisible];
     return YES;
 }
 
@@ -42,12 +46,17 @@
 //    
 //    NSLog(@"file exists: %i", [NSFileManager fileExistsAtNoBackupDirectory:@"muh"]);
     
-    KGTimeConverter *t = [KGTimeConverter timeConverterWithNumber:[NSNumber numberWithFloat:86401]];
-    t.timeUnit = KGTimeUnitSecond;
-    t.timeFormat = KGTimeFormatDaysHoursMinutesSeconds;
+//    KGTimeConverter *t = [KGTimeConverter timeConverterWithNumber:[NSNumber numberWithFloat:86401]];
+//    t.timeUnit = KGTimeUnitSecond;
+//    t.timeFormat = KGTimeFormatDaysHoursMinutesSeconds;
+//    
+//    NSLog(@"milliseconds: %f, seconds: %f, minutes: %f, hours: %f, days: %f", t.milliseconds, t.seconds, t.minutes, t.hours, t.days);
+//    NSLog(@"timeString: %@", t.timeString);
     
-    NSLog(@"milliseconds: %f, seconds: %f, minutes: %f, hours: %f, days: %f", t.milliseconds, t.seconds, t.minutes, t.hours, t.days);
-    NSLog(@"timeString: %@", t.timeString);
+
+    [KGAccounts requestAccountWithAccountTypeIdentifier:ACAccountTypeIdentifierFacebook completion:^(ACAccount *account) {
+        NSLog(@"account; %@", account.username);
+    }];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

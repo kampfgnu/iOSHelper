@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		026C21B51746F8BD00F0DAA6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 026C21B41746F8BD00F0DAA6 /* Default-568h@2x.png */; };
 		FC31C1151552837C009AC76C /* UIView+Userdata.m in Sources */ = {isa = PBXBuildFile; fileRef = FC31C1141552837C009AC76C /* UIView+Userdata.m */; };
 		FC43A5EA15511BBA00310EAD /* UIView+Sizes.m in Sources */ = {isa = PBXBuildFile; fileRef = FC43A5E915511BBA00310EAD /* UIView+Sizes.m */; };
 		FC66815216102F21004CF99C /* KGAccounts.m in Sources */ = {isa = PBXBuildFile; fileRef = FC66815116102F21004CF99C /* KGAccounts.m */; };
+		FC66815516103DBA004CF99C /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC66815416103DBA004CF99C /* Accounts.framework */; };
 		FC91CFEE1553D5580052075B /* KGTimeConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = FC91CFED1553D5570052075B /* KGTimeConverter.m */; };
 		FCE6A5D7154E7B2D0027A21A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE6A5D6154E7B2D0027A21A /* UIKit.framework */; };
 		FCE6A5D9154E7B2D0027A21A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE6A5D8154E7B2D0027A21A /* Foundation.framework */; };
@@ -22,12 +24,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		026C21B41746F8BD00F0DAA6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		026C21B61746F91100F0DAA6 /* iOSHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOSHelper.h; sourceTree = "<group>"; };
 		FC31C1131552837C009AC76C /* UIView+Userdata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Userdata.h"; sourceTree = "<group>"; };
 		FC31C1141552837C009AC76C /* UIView+Userdata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Userdata.m"; sourceTree = "<group>"; };
 		FC43A5E815511BBA00310EAD /* UIView+Sizes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Sizes.h"; sourceTree = "<group>"; };
 		FC43A5E915511BBA00310EAD /* UIView+Sizes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Sizes.m"; sourceTree = "<group>"; };
 		FC66815016102F20004CF99C /* KGAccounts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGAccounts.h; sourceTree = "<group>"; };
 		FC66815116102F21004CF99C /* KGAccounts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGAccounts.m; sourceTree = "<group>"; };
+		FC66815416103DBA004CF99C /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		FC91CFEC1553D5570052075B /* KGTimeConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGTimeConverter.h; sourceTree = "<group>"; };
 		FC91CFED1553D5570052075B /* KGTimeConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGTimeConverter.m; sourceTree = "<group>"; };
 		FCE6A5D2154E7B2D0027A21A /* iOSHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC66815516103DBA004CF99C /* Accounts.framework in Frameworks */,
 				FCE6A5D7154E7B2D0027A21A /* UIKit.framework in Frameworks */,
 				FCE6A5D9154E7B2D0027A21A /* Foundation.framework in Frameworks */,
 				FCE6A5DB154E7B2D0027A21A /* CoreGraphics.framework in Frameworks */,
@@ -64,6 +70,7 @@
 		FCE6A5C7154E7B2D0027A21A = {
 			isa = PBXGroup;
 			children = (
+				026C21B41746F8BD00F0DAA6 /* Default-568h@2x.png */,
 				FCE6A5DC154E7B2D0027A21A /* iOSHelper */,
 				FCE6A5D5154E7B2D0027A21A /* Frameworks */,
 				FCE6A5D3154E7B2D0027A21A /* Products */,
@@ -81,6 +88,7 @@
 		FCE6A5D5154E7B2D0027A21A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FC66815416103DBA004CF99C /* Accounts.framework */,
 				FCE6A5D6154E7B2D0027A21A /* UIKit.framework */,
 				FCE6A5D8154E7B2D0027A21A /* Foundation.framework */,
 				FCE6A5DA154E7B2D0027A21A /* CoreGraphics.framework */,
@@ -126,6 +134,7 @@
 				FC31C1141552837C009AC76C /* UIView+Userdata.m */,
 				FC91CFEC1553D5570052075B /* KGTimeConverter.h */,
 				FC91CFED1553D5570052075B /* KGTimeConverter.m */,
+				026C21B61746F91100F0DAA6 /* iOSHelper.h */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -182,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCE6A5E1154E7B2D0027A21A /* InfoPlist.strings in Resources */,
+				026C21B51746F8BD00F0DAA6 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -18,7 +18,13 @@
 + (void)requestAccountWithAccountTypeIdentifier:(NSString *)accountTypeIdentifier completion:(void(^)(ACAccount *))callback {
     ACAccountStore *store = [[ACAccountStore alloc] init];
 	ACAccountType *accountType = [store accountTypeWithAccountTypeIdentifier:accountTypeIdentifier];
-	[store requestAccessToAccountsWithType:accountType withCompletionHandler:^(BOOL granted, NSError *error) {
+    //ACFacebookPermissionGroupKey: @"write"
+    NSDictionary *options = nil;
+    if (accountTypeIdentifier == ACAccountTypeIdentifierFacebook) {
+        options = @{ACFacebookAppIdKey: @"179883298723832", ACFacebookAudienceKey: ACFacebookAudienceEveryone, ACFacebookPermissionsKey: @[@"user_about_me", @"publish_actions"]};
+    }
+    
+	[store requestAccessToAccountsWithType:accountType options:options completion:^(BOOL granted, NSError *error) {
 		if (granted) {
             NSLog(@"granted");
 			NSArray *accounts = [store accountsWithAccountType:accountType];
