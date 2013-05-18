@@ -12,4 +12,5 @@ Pod::Spec.new do |s|
   s.prefix_header_contents = '
 #include <iOSHelper.h>
   '
+  s.frameworks = 'Accounts'
 end
