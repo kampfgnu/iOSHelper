@@ -8,12 +8,6 @@
 
 #import "AppDelegate.h"
 
-#import "NSFileManager+KGiOSHelper.h"
-#import "KGTimeConverter.h"
-#import "KGAccounts.h"
-#import <Accounts/ACAccount.h>
-#import <Accounts/ACAccountType.h>
-
 @interface AppDelegate ()
 
 - (void)test;
@@ -53,10 +47,6 @@
 //    NSLog(@"milliseconds: %f, seconds: %f, minutes: %f, hours: %f, days: %f", t.milliseconds, t.seconds, t.minutes, t.hours, t.days);
 //    NSLog(@"timeString: %@", t.timeString);
     
-
-    [KGAccounts requestAccountWithAccountTypeIdentifier:ACAccountTypeIdentifierFacebook completion:^(ACAccount *account) {
-        NSLog(@"account; %@", account.username);
-    }];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

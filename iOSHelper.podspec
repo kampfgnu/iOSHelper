@@ -5,12 +5,17 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/kampfgnu/iOSHelper"
   s.authors      = { "kampfgnu" => "heinilein@hotmail.com" }  
   s.source       = { :git => "https://github.com/kampfgnu/iOSHelper.git" }
-  s.source_files = 'Classes', 'iOSHelper/Classes/*.{h,m}'
-  s.requires_arc = false
+  s.source_files = 'iOSHelper/Classes/*.{h,m}', 'iOSHelper/Classes/Core/*.{h,m}', 'iOSHelper/Classes/Misc/*.{h,m}', 'iOSHelper/Classes/UIKit/*.{h,m}'
+  s.frameworks = 'QuartzCore', 'CoreGraphics'
+  s.requires_arc = true
   s.platform     = :ios, '5.0'
   s.ios.deployment_target = '5.0'
-  s.prefix_header_contents = '
+
+  s.subspec "iOSHelper" do |ss|
+    ss.source_files = "iOSHelper"
+    ss.public_header_files = "iOSHelper/*.h"
+    ss.prefix_header_contents = '
 #include <iOSHelper.h>
-  '
-  s.frameworks = 'Accounts'
+    '
+  end
 end
