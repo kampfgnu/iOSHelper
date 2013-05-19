@@ -11,11 +11,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '5.0'
   s.ios.deployment_target = '5.0'
 
-  s.subspec "iOSHelper" do |ss|
-    ss.source_files = "iOSHelper"
-    ss.public_header_files = "iOSHelper/*.h"
-    ss.prefix_header_contents = '
+  s.prefix_header_contents = '
 #include <iOSHelper.h>
-    '
-  end
+  '
 end
