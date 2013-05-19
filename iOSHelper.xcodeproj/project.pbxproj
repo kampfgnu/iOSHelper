@@ -64,7 +64,6 @@
 		FCE6A5E4154E7B2D0027A21A /* iOSHelper-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSHelper-Prefix.pch"; sourceTree = "<group>"; };
 		FCE6A5E5154E7B2D0027A21A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FCE6A5E6154E7B2D0027A21A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FCE6A5FC154E7C370027A21A /* KGDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KGDefines.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,7 +180,6 @@
 			isa = PBXGroup;
 			children = (
 				026C21B61746F91100F0DAA6 /* iOSHelper.h */,
-				FCE6A5FC154E7C370027A21A /* KGDefines.h */,
 				0227A2A71748D7F500CA6685 /* Misc */,
 				0227A28A1748D5D000CA6685 /* Core */,
 				0227A28D1748D5D000CA6685 /* UIKit */,

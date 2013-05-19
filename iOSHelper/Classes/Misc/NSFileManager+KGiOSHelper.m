@@ -8,9 +8,9 @@
 
 #import "NSFileManager+KGiOSHelper.h"
 
-#import "KGDefines.h"
-
 #import "sys/xattr.h"
+
+#define KGNoBackupDirectory @"NoBackup"
 
 @implementation NSFileManager (KGiOSHelper)
 
