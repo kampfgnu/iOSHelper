@@ -1,4 +1,5 @@
 #import "UIColor+KGAdditions.h"
+#import "KGMath.h"
 
 @implementation UIColor (KGAdditions)
 
