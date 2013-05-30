@@ -9,6 +9,8 @@
 #import "NSFileManager+KGiOSHelper.h"
 #import "CGGeometry+KGAdditions.h"
 #import "KGMath.h"
+#import "KGShortHands.h"
+#import "NSDate+KGAdditions.h"
 #import "UIColor+KGAdditions.h"
 #import "UIView+KGAdditions.h"
 #import "UIView+KGAnimations.h"

@@ -19,6 +19,7 @@
 		0227A2AF1748D7F500CA6685 /* KGWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 0227A2AB1748D7F500CA6685 /* KGWindow.m */; };
 		0227A2B01748D7F500CA6685 /* NSFileManager+KGiOSHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0227A2AD1748D7F500CA6685 /* NSFileManager+KGiOSHelper.m */; };
 		026C21B51746F8BD00F0DAA6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 026C21B41746F8BD00F0DAA6 /* Default-568h@2x.png */; };
+		02752F7417575539004ABF79 /* NSDate+KGAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 02752F7317575539004ABF79 /* NSDate+KGAdditions.m */; };
 		FCE6A5D7154E7B2D0027A21A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE6A5D6154E7B2D0027A21A /* UIKit.framework */; };
 		FCE6A5D9154E7B2D0027A21A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE6A5D8154E7B2D0027A21A /* Foundation.framework */; };
 		FCE6A5DB154E7B2D0027A21A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE6A5DA154E7B2D0027A21A /* CoreGraphics.framework */; };
@@ -54,6 +55,9 @@
 		0227A2AD1748D7F500CA6685 /* NSFileManager+KGiOSHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+KGiOSHelper.m"; sourceTree = "<group>"; };
 		026C21B41746F8BD00F0DAA6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		026C21B61746F91100F0DAA6 /* iOSHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOSHelper.h; sourceTree = "<group>"; };
+		02752F7217575539004ABF79 /* NSDate+KGAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+KGAdditions.h"; sourceTree = "<group>"; };
+		02752F7317575539004ABF79 /* NSDate+KGAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+KGAdditions.m"; sourceTree = "<group>"; };
+		02752F7517575540004ABF79 /* KGShorthands.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGShorthands.h; sourceTree = "<group>"; };
 		FCE6A5D2154E7B2D0027A21A /* iOSHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCE6A5D6154E7B2D0027A21A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FCE6A5D8154E7B2D0027A21A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -84,6 +88,7 @@
 		0227A28A1748D5D000CA6685 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				02752F7517575540004ABF79 /* KGShorthands.h */,
 				0227A28B1748D5D000CA6685 /* CGGeometry+KGAdditions.h */,
 				0227A28C1748D5D000CA6685 /* KGMath.h */,
 			);
@@ -115,6 +120,8 @@
 		0227A2A71748D7F500CA6685 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				02752F7217575539004ABF79 /* NSDate+KGAdditions.h */,
+				02752F7317575539004ABF79 /* NSDate+KGAdditions.m */,
 				0227A2A81748D7F500CA6685 /* KGTimeConverter.h */,
 				0227A2A91748D7F500CA6685 /* KGTimeConverter.m */,
 				0227A2AA1748D7F500CA6685 /* KGWindow.h */,
@@ -262,6 +269,7 @@
 				0227A2AE1748D7F500CA6685 /* KGTimeConverter.m in Sources */,
 				0227A2AF1748D7F500CA6685 /* KGWindow.m in Sources */,
 				0227A2B01748D7F500CA6685 /* NSFileManager+KGiOSHelper.m in Sources */,
+				02752F7417575539004ABF79 /* NSDate+KGAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
