@@ -14,7 +14,6 @@
 + (NSDate *)dateWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day hour:(NSInteger)hour minute:(NSInteger)minute;
 + (NSDate *)dateWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day hour:(NSInteger)hour minute:(NSInteger)minute second:(NSInteger)second;
 
-- (NSString *)relativeDateString;
 - (NSString *)dateStringWithFormat:(NSString *)format;
 
 - (BOOL)isBefore:(NSDate *)otherDate;

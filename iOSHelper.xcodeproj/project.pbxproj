@@ -57,7 +57,6 @@
 		026C21B61746F91100F0DAA6 /* iOSHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOSHelper.h; sourceTree = "<group>"; };
 		02752F7217575539004ABF79 /* NSDate+KGAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+KGAdditions.h"; sourceTree = "<group>"; };
 		02752F7317575539004ABF79 /* NSDate+KGAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+KGAdditions.m"; sourceTree = "<group>"; };
-		02752F7517575540004ABF79 /* KGShorthands.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGShorthands.h; sourceTree = "<group>"; };
 		FCE6A5D2154E7B2D0027A21A /* iOSHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCE6A5D6154E7B2D0027A21A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FCE6A5D8154E7B2D0027A21A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -88,7 +87,6 @@
 		0227A28A1748D5D000CA6685 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				02752F7517575540004ABF79 /* KGShorthands.h */,
 				0227A28B1748D5D000CA6685 /* CGGeometry+KGAdditions.h */,
 				0227A28C1748D5D000CA6685 /* KGMath.h */,
 			);
