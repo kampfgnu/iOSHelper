@@ -57,6 +57,10 @@ NSDateFormatter* dateFormatter(void);
 	return [gregorian dateFromComponents:comps];
 }
 
++ (NSDate *)nowByAddingTimeInterval:(NSTimeInterval)timeInterval {
+    return [[NSDate date] dateByAddingTimeInterval:timeInterval];
+}
+
 ////////////////////////////////////////////////////////////////////////
 #pragma mark -
 #pragma mark Instance Methods
