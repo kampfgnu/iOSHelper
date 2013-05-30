@@ -1,6 +1,8 @@
 #import "NSDate+KGAdditions.h"
 #import "KGMath.h"
 
+#define kKGHTTPDateFormat @"EEE',' dd MMM yyyy HH':'mm':'ss 'GMT'"
+
 static NSDateFormatter *dateFormatter_ = nil;
 
 NSDateFormatter* dateFormatter(void);
@@ -59,6 +61,13 @@ NSDateFormatter* dateFormatter(void);
 
 + (NSDate *)nowByAddingTimeInterval:(NSTimeInterval)timeInterval {
     return [[NSDate date] dateByAddingTimeInterval:timeInterval];
+}
+
++ (NSDate *)dateFromHTTPDateString:(NSString *)httpDateString {
+    NSDateFormatter *formatter = dateFormatter();
+//    formatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"GMT"];
+	[formatter setDateFormat:kKGHTTPDateFormat];
+    return [formatter dateFromString:httpDateString];
 }
 
 ////////////////////////////////////////////////////////////////////////

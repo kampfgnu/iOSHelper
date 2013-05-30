@@ -14,6 +14,7 @@
 + (NSDate *)dateWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day hour:(NSInteger)hour minute:(NSInteger)minute;
 + (NSDate *)dateWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day hour:(NSInteger)hour minute:(NSInteger)minute second:(NSInteger)second;
 + (NSDate *)nowByAddingTimeInterval:(NSTimeInterval)timeInterval;
++ (NSDate *)dateFromHTTPDateString:(NSString *)httpDateString;
 
 - (NSString *)dateStringWithFormat:(NSString *)format;
 
