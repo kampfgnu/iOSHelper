@@ -14,5 +14,6 @@
 + (BOOL)writeDataToNoBackupDirectory:(NSData *)data filename:(NSString *)filename;
 + (BOOL)fileExistsAtNoBackupDirectory:(NSString *)filename;
 + (NSData *)dataInNoBackupDirectoryWithFilename:(NSString *)filename;
++ (void)createPathIfNotExists:(NSString *)path;
 
 @end

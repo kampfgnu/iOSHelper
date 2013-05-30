@@ -46,4 +46,10 @@
     return [NSData dataWithContentsOfFile:filepath];
 }
 
++ (void)createPathIfNotExists:(NSString *)path {
+    if (![[NSFileManager defaultManager] fileExistsAtPath:path]) {
+        [[NSFileManager defaultManager] createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:nil];
+    }
+}
+
 @end
