@@ -10,6 +10,7 @@
 #import "CGGeometry+KGAdditions.h"
 #import "KGMath.h"
 #import "NSDate+KGAdditions.h"
+#import "NSString+KGAdditions.h"
 #import "UIColor+KGAdditions.h"
 #import "UIView+KGAdditions.h"
 #import "UIView+KGAnimations.h"
