@@ -7,6 +7,7 @@
 //
 
 #import "KGQuartzDrawing.h"
+#import "UIColor+KGAdditions.h"
 
 @implementation KGQuartzDrawing
 
