@@ -18,7 +18,7 @@
 		0227A2AE1748D7F500CA6685 /* KGTimeConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0227A2A91748D7F500CA6685 /* KGTimeConverter.m */; };
 		0227A2AF1748D7F500CA6685 /* KGWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 0227A2AB1748D7F500CA6685 /* KGWindow.m */; };
 		0227A2B01748D7F500CA6685 /* NSFileManager+KGiOSHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0227A2AD1748D7F500CA6685 /* NSFileManager+KGiOSHelper.m */; };
-		0234A26F175A056A006035C6 /* KGCGRectHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0234A26E175A056A006035C6 /* KGCGRectHelper.m */; };
+		0234A273175A08E1006035C6 /* KGQuartzDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = 0234A272175A08E1006035C6 /* KGQuartzDrawing.m */; };
 		025DB6221758D473007D81C0 /* NSString+KGAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 025DB6211758D473007D81C0 /* NSString+KGAdditions.m */; };
 		026C21B51746F8BD00F0DAA6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 026C21B41746F8BD00F0DAA6 /* Default-568h@2x.png */; };
 		02752F7417575539004ABF79 /* NSDate+KGAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 02752F7317575539004ABF79 /* NSDate+KGAdditions.m */; };
@@ -55,8 +55,8 @@
 		0227A2AB1748D7F500CA6685 /* KGWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGWindow.m; sourceTree = "<group>"; };
 		0227A2AC1748D7F500CA6685 /* NSFileManager+KGiOSHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+KGiOSHelper.h"; sourceTree = "<group>"; };
 		0227A2AD1748D7F500CA6685 /* NSFileManager+KGiOSHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+KGiOSHelper.m"; sourceTree = "<group>"; };
-		0234A26D175A056A006035C6 /* KGCGRectHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGCGRectHelper.h; sourceTree = "<group>"; };
-		0234A26E175A056A006035C6 /* KGCGRectHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGCGRectHelper.m; sourceTree = "<group>"; };
+		0234A271175A08E1006035C6 /* KGQuartzDrawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGQuartzDrawing.h; sourceTree = "<group>"; };
+		0234A272175A08E1006035C6 /* KGQuartzDrawing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGQuartzDrawing.m; sourceTree = "<group>"; };
 		025DB6201758D473007D81C0 /* NSString+KGAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+KGAdditions.h"; sourceTree = "<group>"; };
 		025DB6211758D473007D81C0 /* NSString+KGAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+KGAdditions.m"; sourceTree = "<group>"; };
 		026C21B41746F8BD00F0DAA6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -138,11 +138,11 @@
 			path = Misc;
 			sourceTree = "<group>";
 		};
-		0234A26C175A050C006035C6 /* CoreGraphics */ = {
+		0234A270175A08E1006035C6 /* CoreGraphics */ = {
 			isa = PBXGroup;
 			children = (
-				0234A26D175A056A006035C6 /* KGCGRectHelper.h */,
-				0234A26E175A056A006035C6 /* KGCGRectHelper.m */,
+				0234A271175A08E1006035C6 /* KGQuartzDrawing.h */,
+				0234A272175A08E1006035C6 /* KGQuartzDrawing.m */,
 			);
 			path = CoreGraphics;
 			sourceTree = "<group>";
@@ -179,9 +179,9 @@
 		FCE6A5DC154E7B2D0027A21A /* iOSHelper */ = {
 			isa = PBXGroup;
 			children = (
-				FCE6A5FA154E7BB00027A21A /* Classes */,
 				FCE6A5E5154E7B2D0027A21A /* AppDelegate.h */,
 				FCE6A5E6154E7B2D0027A21A /* AppDelegate.m */,
+				FCE6A5FA154E7BB00027A21A /* Classes */,
 				FCE6A5DD154E7B2D0027A21A /* Supporting Files */,
 			);
 			path = iOSHelper;
@@ -201,8 +201,8 @@
 		FCE6A5FA154E7BB00027A21A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				0234A26C175A050C006035C6 /* CoreGraphics */,
 				026C21B61746F91100F0DAA6 /* iOSHelper.h */,
+				0234A270175A08E1006035C6 /* CoreGraphics */,
 				0227A2A71748D7F500CA6685 /* Misc */,
 				0227A28A1748D5D000CA6685 /* Core */,
 				0227A28D1748D5D000CA6685 /* UIKit */,
@@ -287,7 +287,7 @@
 				0227A2B01748D7F500CA6685 /* NSFileManager+KGiOSHelper.m in Sources */,
 				02752F7417575539004ABF79 /* NSDate+KGAdditions.m in Sources */,
 				025DB6221758D473007D81C0 /* NSString+KGAdditions.m in Sources */,
-				0234A26F175A056A006035C6 /* KGCGRectHelper.m in Sources */,
+				0234A273175A08E1006035C6 /* KGQuartzDrawing.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

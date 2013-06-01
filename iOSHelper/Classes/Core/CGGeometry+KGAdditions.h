@@ -160,3 +160,7 @@ NS_INLINE CGAffineTransform KGRotationTransformForOrientation(UIInterfaceOrienta
         return CGAffineTransformIdentity;
     }
 }
+
+NS_INLINE void KGLogRect(CGRect rect) {
+    NSLog(@"x: %f, y: %f, w: %f, h: %f", rect.origin.x, rect.origin.y, rect.size.width, rect.size.width);
+}
