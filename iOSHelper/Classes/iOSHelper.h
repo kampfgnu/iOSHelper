@@ -19,3 +19,4 @@
 #import "UIView+KGInnerShadow.h"
 #import "UIView+KGNoise.h"
 #import "UIView+Userdata.h"
+#import "KGCGRectHelper.h"
