@@ -93,4 +93,68 @@
 	return retImage;
 }
 
+////////////////////////////////////////////////////////////////////////
+#pragma mark -
+#pragma mark - pdf stuff
+////////////////////////////////////////////////////////////////////////
+
++ (UIImage *)imageOfPdfData:(NSData *)data page:(int)page scale:(CGFloat)scale {
+    return [KGQuartzDrawing imageOfPdfData:data page:page scale:scale pageSize:nil];
+}
+
++ (UIImage *)imageOfPdfData:(NSData *)data page:(int)page scale:(CGFloat)scale pageSize:(CGSize *)pageSize {
+    CGDataProviderRef dataProv = CGDataProviderCreateWithCFData((__bridge CFDataRef)data);
+    CGPDFDocumentRef docRef = CGPDFDocumentCreateWithProvider(dataProv);
+    CGDataProviderRelease(dataProv);
+    
+    CGPDFPageRef pageRef = CGPDFDocumentGetPage(docRef, page);
+    
+    UIImage *image = [KGQuartzDrawing imageOfPage:pageRef scale:scale pageSize:pageSize];
+    
+    CGPDFDocumentRelease(docRef);
+    
+    return image;
+}
+
++ (UIImage *)imageOfPage:(CGPDFPageRef)page scale:(CGFloat)scale {
+    return [KGQuartzDrawing imageOfPage:page scale:scale pageSize:nil];
+}
+
++ (UIImage *)imageOfPage:(CGPDFPageRef)page scale:(CGFloat)scale pageSize:(CGSize *)pageSize {
+    CGRect cropBoxRect = CGPDFPageGetBoxRect(page, kCGPDFCropBox);
+    CGRect mediaBoxRect = CGPDFPageGetBoxRect(page, kCGPDFMediaBox);
+    CGRect pageRect = CGRectIntersection(cropBoxRect, mediaBoxRect);
+    pageRect.origin = CGPointZero;
+    
+    pageRect.size = CGSizeMake(pageRect.size.width*scale, pageRect.size.height*scale);
+    cropBoxRect.size = CGSizeMake(cropBoxRect.size.width*scale, cropBoxRect.size.height*scale);
+    
+    if (pageSize) {
+        *pageSize = cropBoxRect.size;
+    }
+    
+    UIGraphicsBeginImageContext(cropBoxRect.size);
+    
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    // White BG
+    CGContextSetRGBFillColor(context, 1.0, 1.0, 1.0, 1.0);
+    CGContextFillRect(context, pageRect);
+    
+    CGContextSaveGState(context);
+    
+    CGContextTranslateCTM(context, 0.0, pageRect.size.height);
+    CGContextScaleCTM(context, 1.0, -1.0);
+    CGContextConcatCTM(context, CGPDFPageGetDrawingTransform(page, kCGPDFCropBox, pageRect, 0, true));
+    
+    CGContextDrawPDFPage(context, page);
+    CGContextRestoreGState(context);
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
+
 @end
