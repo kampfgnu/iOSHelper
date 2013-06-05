@@ -32,6 +32,14 @@
 + (CGFloat)colorDifferenceBetweenColor:(UIColor *)color1 color:(UIColor *)color2;
 
 /**
+ Creates a color with changed brightness
+ @param color the reference color
+ @param amount the amount of brightness (Using 1.1f it will increase the brightness by 10%; 0.9f will decrease the brightness by 10%)
+ @return the difference between self and color in the range between 0.0 and 3.0
+ */
++ (UIColor *)changeBrightness:(UIColor *)color amount:(CGFloat)amount;
+
+/**
  The color difference between self and another color.
  The difference lies in the range between 0.0 and 3.0
  
