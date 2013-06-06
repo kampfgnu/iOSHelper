@@ -28,20 +28,16 @@
         if ([fileManager createDirectoryAtPath:noBackupDir withIntermediateDirectories:YES attributes:nil error:nil]) {
             if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"5.1")) {
                 BOOL success = [noBackupDirUrl setResourceValue:[NSNumber numberWithBool:YES] forKey:NSURLIsExcludedFromBackupKey error:nil];
-                NSLog(@"success: %i", success);
+//                NSLog(@"success: %i", success);
             }
             else if (SYSTEM_VERSION_EQUAL_TO(@"5.0.1")) {
                 const char* filePath = [[noBackupDirUrl path] fileSystemRepresentation];
                 const char* attrName = "com.apple.MobileBackup";
                 u_int8_t attrValue = 1;
                 int result = setxattr(filePath, attrName, &attrValue, sizeof(attrValue), 0, 0);
-                NSLog(@"success: %i", result);
+//                NSLog(@"success: %i", result);
             }
         }
-        
-        
-//        u_int8_t b = 1;
-//        setxattr([noBackupDir fileSystemRepresentation], "com.apple.MobileBackup", &b, 1, 0, 0);
     }
     
     return noBackupDir;
