@@ -15,12 +15,24 @@
 
 @implementation NSFileManager (KGiOSHelper)
 
++ (NSString *)documentsDirectoryPath {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory , NSUserDomainMask, YES);
+    NSString *dir = [paths objectAtIndex:0];
+    
+    return dir;
+}
+
++ (NSString *)cachesDirectoryPath {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory , NSUserDomainMask, YES);
+    NSString *dir = [paths objectAtIndex:0];
+    
+    return dir;
+}
+
 + (NSString *)documentsNoBackupDirectoryPath {
     BOOL useCacheDir = SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(@"5.0");
-    BOOL setHidden = YES;
     
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(useCacheDir ? NSCachesDirectory : NSDocumentDirectory , NSUserDomainMask, YES);
-    NSString *dir = [paths objectAtIndex:0];
+    NSString *dir = useCacheDir ? [self cachesDirectoryPath] : [self documentsDirectoryPath];
     NSString *noBackupDir = [dir stringByAppendingPathComponent:KGNoBackupDirectory];
     NSURL *noBackupDirUrl = [NSURL fileURLWithPath:noBackupDir];
     
@@ -60,6 +72,14 @@
 + (NSData *)dataInNoBackupDirectoryWithFilename:(NSString *)filename {
     NSString *filepath = [[self documentsNoBackupDirectoryPath] stringByAppendingPathComponent:filename];
     return [NSData dataWithContentsOfFile:filepath];
+}
+
++ (NSData *)dataAtPath:(NSString *)path {
+    NSFileManager *fileManager = [NSFileManager new];
+    if ([fileManager fileExistsAtPath:path]) {
+        return [NSData dataWithContentsOfFile:path];
+    }
+    else return nil;
 }
 
 + (void)createPathIfNotExists:(NSString *)path {
