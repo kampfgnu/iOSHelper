@@ -11,12 +11,13 @@
 
 #import "sys/xattr.h"
 
-#define KGNoBackupDirectory @"NoBackup"
+#define KGNoBackupDirectory @".noBackup"
 
 @implementation NSFileManager (KGiOSHelper)
 
 + (NSString *)documentsNoBackupDirectoryPath {
     BOOL useCacheDir = SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(@"5.0");
+    BOOL setHidden = YES;
     
     NSArray *paths = NSSearchPathForDirectoriesInDomains(useCacheDir ? NSCachesDirectory : NSDocumentDirectory , NSUserDomainMask, YES);
     NSString *dir = [paths objectAtIndex:0];
@@ -29,6 +30,8 @@
             if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"5.1")) {
                 BOOL success = [noBackupDirUrl setResourceValue:[NSNumber numberWithBool:YES] forKey:NSURLIsExcludedFromBackupKey error:nil];
 //                NSLog(@"success: %i", success);
+//                BOOL setHiddenSuccess = [noBackupDirUrl setResourceValue:[NSNumber numberWithBool:YES] forKey:NSURLIsHiddenKey error:nil];
+//                NSLog(@"setHiddenSuccess: %i", setHiddenSuccess);
             }
             else if (SYSTEM_VERSION_EQUAL_TO(@"5.0.1")) {
                 const char* filePath = [[noBackupDirUrl path] fileSystemRepresentation];
