@@ -30,8 +30,6 @@
             if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"5.1")) {
                 BOOL success = [noBackupDirUrl setResourceValue:[NSNumber numberWithBool:YES] forKey:NSURLIsExcludedFromBackupKey error:nil];
 //                NSLog(@"success: %i", success);
-//                BOOL setHiddenSuccess = [noBackupDirUrl setResourceValue:[NSNumber numberWithBool:YES] forKey:NSURLIsHiddenKey error:nil];
-//                NSLog(@"setHiddenSuccess: %i", setHiddenSuccess);
             }
             else if (SYSTEM_VERSION_EQUAL_TO(@"5.0.1")) {
                 const char* filePath = [[noBackupDirUrl path] fileSystemRepresentation];
