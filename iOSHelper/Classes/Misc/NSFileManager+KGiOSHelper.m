@@ -7,6 +7,7 @@
 //
 
 #import "NSFileManager+KGiOSHelper.h"
+#import "KGMacros.h"
 
 #import "sys/xattr.h"
 
