@@ -15,5 +15,7 @@
 + (BOOL)fileExistsAtNoBackupDirectory:(NSString *)filename;
 + (NSData *)dataInNoBackupDirectoryWithFilename:(NSString *)filename;
 + (void)createPathIfNotExists:(NSString *)path;
++ (BOOL)isPDF:(NSString *)filePath;
++ (BOOL)deleteFileAtPath:(NSString *)path;
 
 @end
