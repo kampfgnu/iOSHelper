@@ -21,7 +21,7 @@
     
     NSFileManager *fileManager = [NSFileManager new];
     if (![fileManager fileExistsAtPath:noBackupDir]) {
-        [fileManager createDirectoryAtPath:noBackupDir withIntermediateDirectories:NO attributes:nil error:nil];
+        [fileManager createDirectoryAtPath:noBackupDir withIntermediateDirectories:YES attributes:nil error:nil];
         u_int8_t b = 1;
         setxattr([noBackupDir fileSystemRepresentation], "com.apple.MobileBackup", &b, 1, 0, 0);
     }
