@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 NOUS. All rights reserved.
 //
 
+#import "KGMacros.h"
 #import "NSFileManager+KGiOSHelper.h"
 #import "CGGeometry+KGAdditions.h"
 #import "KGMath.h"
