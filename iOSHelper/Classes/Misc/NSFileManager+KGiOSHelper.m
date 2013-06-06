@@ -15,15 +15,32 @@
 @implementation NSFileManager (KGiOSHelper)
 
 + (NSString *)documentsNoBackupDirectoryPath {
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory , NSUserDomainMask, YES);
-    NSString *documentsDir = [paths objectAtIndex:0];
-    NSString *noBackupDir = [documentsDir stringByAppendingPathComponent:KGNoBackupDirectory];
+    BOOL useCacheDir = SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(@"5.0");
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(useCacheDir ? NSCachesDirectory : NSDocumentDirectory , NSUserDomainMask, YES);
+    NSString *dir = [paths objectAtIndex:0];
+    NSString *noBackupDir = [dir stringByAppendingPathComponent:KGNoBackupDirectory];
+    NSURL *noBackupDirUrl = [NSURL fileURLWithPath:noBackupDir];
     
     NSFileManager *fileManager = [NSFileManager new];
     if (![fileManager fileExistsAtPath:noBackupDir]) {
-        [fileManager createDirectoryAtPath:noBackupDir withIntermediateDirectories:YES attributes:nil error:nil];
-        u_int8_t b = 1;
-        setxattr([noBackupDir fileSystemRepresentation], "com.apple.MobileBackup", &b, 1, 0, 0);
+        if ([fileManager createDirectoryAtPath:noBackupDir withIntermediateDirectories:YES attributes:nil error:nil]) {
+            if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"5.1")) {
+                BOOL success = [noBackupDirUrl setResourceValue:[NSNumber numberWithBool:YES] forKey:NSURLIsExcludedFromBackupKey error:nil];
+                NSLog(@"success: %i", success);
+            }
+            else if (SYSTEM_VERSION_EQUAL_TO(@"5.0.1")) {
+                const char* filePath = [[noBackupDirUrl path] fileSystemRepresentation];
+                const char* attrName = "com.apple.MobileBackup";
+                u_int8_t attrValue = 1;
+                int result = setxattr(filePath, attrName, &attrValue, sizeof(attrValue), 0, 0);
+                NSLog(@"success: %i", result);
+            }
+        }
+        
+        
+//        u_int8_t b = 1;
+//        setxattr([noBackupDir fileSystemRepresentation], "com.apple.MobileBackup", &b, 1, 0, 0);
     }
     
     return noBackupDir;
