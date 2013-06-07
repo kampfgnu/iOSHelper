@@ -21,3 +21,6 @@
 #import "UIView+KGNoise.h"
 #import "UIView+Userdata.h"
 #import "KGQuartzDrawing.h"
+
+//optional
+//#import "KGQueuePlayer.h"
