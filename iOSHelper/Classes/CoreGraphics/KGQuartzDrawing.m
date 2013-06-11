@@ -126,7 +126,7 @@
     CGRect pageRect = CGRectIntersection(cropBoxRect, mediaBoxRect);
     pageRect.origin = CGPointZero;
     
-    pageRect.size = CGSizeMake(pageRect.size.width*scale, pageRect.size.height*scale);
+    pageRect.size = CGSizeMake(pageRect.size.width, pageRect.size.height);
     cropBoxRect.size = CGSizeMake(cropBoxRect.size.width*scale, cropBoxRect.size.height*scale);
     
     if (pageSize) {
@@ -143,11 +143,14 @@
     
     CGContextSaveGState(context);
     
-    CGContextTranslateCTM(context, 0.0, pageRect.size.height);
-    CGContextScaleCTM(context, 1.0, -1.0);
+    CGContextTranslateCTM(context, 0.0, pageRect.size.height*scale);
+    CGContextScaleCTM(context, scale, -scale);
     CGContextConcatCTM(context, CGPDFPageGetDrawingTransform(page, kCGPDFCropBox, pageRect, 0, true));
     
     CGContextDrawPDFPage(context, page);
+//    CGContextSetInterpolationQuality(context, kCGInterpolationHigh);
+//    CGContextSetRenderingIntent(context, kCGRenderingIntentDefault);
+    
     CGContextRestoreGState(context);
     
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
