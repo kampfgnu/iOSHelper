@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0214CCFC176A046700F3F304 /* NSURL+KGAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0214CCFB176A046700F3F304 /* NSURL+KGAdditions.m */; };
 		0227A29D1748D5D000CA6685 /* UIColor+KGAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0227A28F1748D5D000CA6685 /* UIColor+KGAdditions.m */; };
 		0227A29E1748D5D000CA6685 /* UIView+KGAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0227A2911748D5D000CA6685 /* UIView+KGAdditions.m */; };
 		0227A29F1748D5D000CA6685 /* UIView+KGAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = 0227A2931748D5D000CA6685 /* UIView+KGAnimations.m */; };
@@ -19,7 +20,6 @@
 		0227A2AF1748D7F500CA6685 /* KGWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 0227A2AB1748D7F500CA6685 /* KGWindow.m */; };
 		0227A2B01748D7F500CA6685 /* NSFileManager+KGiOSHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0227A2AD1748D7F500CA6685 /* NSFileManager+KGiOSHelper.m */; };
 		0234A273175A08E1006035C6 /* KGQuartzDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = 0234A272175A08E1006035C6 /* KGQuartzDrawing.m */; };
-		0237E08717615CDF00667727 /* KGQueuePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0237E08617615CDF00667727 /* KGQueuePlayer.m */; };
 		025DB6221758D473007D81C0 /* NSString+KGAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 025DB6211758D473007D81C0 /* NSString+KGAdditions.m */; };
 		026C21B51746F8BD00F0DAA6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 026C21B41746F8BD00F0DAA6 /* Default-568h@2x.png */; };
 		02752F7417575539004ABF79 /* NSDate+KGAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 02752F7317575539004ABF79 /* NSDate+KGAdditions.m */; };
@@ -32,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0214CCFA176A046700F3F304 /* NSURL+KGAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+KGAdditions.h"; sourceTree = "<group>"; };
+		0214CCFB176A046700F3F304 /* NSURL+KGAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+KGAdditions.m"; sourceTree = "<group>"; };
 		0227A28B1748D5D000CA6685 /* CGGeometry+KGAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CGGeometry+KGAdditions.h"; sourceTree = "<group>"; };
 		0227A28C1748D5D000CA6685 /* KGMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGMath.h; sourceTree = "<group>"; };
 		0227A28E1748D5D000CA6685 /* UIColor+KGAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+KGAdditions.h"; sourceTree = "<group>"; };
@@ -58,8 +60,6 @@
 		0227A2AD1748D7F500CA6685 /* NSFileManager+KGiOSHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+KGiOSHelper.m"; sourceTree = "<group>"; };
 		0234A271175A08E1006035C6 /* KGQuartzDrawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGQuartzDrawing.h; sourceTree = "<group>"; };
 		0234A272175A08E1006035C6 /* KGQuartzDrawing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGQuartzDrawing.m; sourceTree = "<group>"; };
-		0237E08517615CDF00667727 /* KGQueuePlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGQueuePlayer.h; sourceTree = "<group>"; };
-		0237E08617615CDF00667727 /* KGQueuePlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGQueuePlayer.m; sourceTree = "<group>"; };
 		025DB6201758D473007D81C0 /* NSString+KGAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+KGAdditions.h"; sourceTree = "<group>"; };
 		025DB6211758D473007D81C0 /* NSString+KGAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+KGAdditions.m"; sourceTree = "<group>"; };
 		026C21B41746F8BD00F0DAA6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -139,6 +139,8 @@
 				0227A2AC1748D7F500CA6685 /* NSFileManager+KGiOSHelper.h */,
 				0227A2AD1748D7F500CA6685 /* NSFileManager+KGiOSHelper.m */,
 				02F8BCB5176092CF00DDAAD5 /* KGMacros.h */,
+				0214CCFA176A046700F3F304 /* NSURL+KGAdditions.h */,
+				0214CCFB176A046700F3F304 /* NSURL+KGAdditions.m */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -155,8 +157,6 @@
 		0237E08417615C6300667727 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
-				0237E08517615CDF00667727 /* KGQueuePlayer.h */,
-				0237E08617615CDF00667727 /* KGQueuePlayer.m */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
@@ -303,7 +303,7 @@
 				02752F7417575539004ABF79 /* NSDate+KGAdditions.m in Sources */,
 				025DB6221758D473007D81C0 /* NSString+KGAdditions.m in Sources */,
 				0234A273175A08E1006035C6 /* KGQuartzDrawing.m in Sources */,
-				0237E08717615CDF00667727 /* KGQueuePlayer.m in Sources */,
+				0214CCFC176A046700F3F304 /* NSURL+KGAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
