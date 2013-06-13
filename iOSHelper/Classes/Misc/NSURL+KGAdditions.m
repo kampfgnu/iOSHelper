@@ -7,10 +7,10 @@
 //
 
 #import "NSURL+KGAdditions.h"
+#import <CommonCrypto/CommonDigest.h>
 
 #define KGCacheKeyPrefix @"default_prefix"
 #define KGCacheKeySuffix @"default_suffix"
-#import <CommonCrypto/CommonDigest.h>
 
 @implementation NSURL (KGAdditions)
 
