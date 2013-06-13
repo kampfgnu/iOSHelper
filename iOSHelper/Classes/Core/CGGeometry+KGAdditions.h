@@ -161,6 +161,10 @@ NS_INLINE CGAffineTransform KGRotationTransformForOrientation(UIInterfaceOrienta
     }
 }
 
+////////////////////////////////////////////////////////////////////////
+#pragma mark - Logging Helper
+////////////////////////////////////////////////////////////////////////
+
 NS_INLINE void KGLogRect(CGRect rect) {
     NSLog(@"x: %f, y: %f, w: %f, h: %f", rect.origin.x, rect.origin.y, rect.size.width, rect.size.height);
 }
@@ -177,6 +181,18 @@ NS_INLINE void KGLogSize(CGSize size) {
     NSLog(@"w: %f, h: %f", size.width, size.height);
 }
 
+////////////////////////////////////////////////////////////////////////
+#pragma mark - Comparison Helper
+////////////////////////////////////////////////////////////////////////
+
 NS_INLINE BOOL KGRectEqualsRect(CGRect rect1, CGRect rect2) {
     return (rect1.origin.x == rect2.origin.x && rect1.origin.y == rect2.origin.y && rect1.size.width == rect2.size.width && rect1.size.height == rect2.size.height);
+}
+
+NS_INLINE BOOL KGPointEqualsPoint(CGPoint point1, CGPoint point2) {
+    return (point1.x == point2.x && point1.y == point2.y);
+}
+
+NS_INLINE BOOL KGSizeEqualsSize(CGSize size1, CGSize size2) {
+    return (size1.width == size2.width && size1.height == size2.height);
 }

@@ -99,17 +99,13 @@
 ////////////////////////////////////////////////////////////////////////
 
 + (UIImage *)imageOfPdfData:(NSData *)data page:(int)page scale:(CGFloat)scale {
-    return [KGQuartzDrawing imageOfPdfData:data page:page scale:scale pageSize:nil];
-}
-
-+ (UIImage *)imageOfPdfData:(NSData *)data page:(int)page scale:(CGFloat)scale pageSize:(CGSize *)pageSize {
     CGDataProviderRef dataProv = CGDataProviderCreateWithCFData((__bridge CFDataRef)data);
     CGPDFDocumentRef docRef = CGPDFDocumentCreateWithProvider(dataProv);
     CGDataProviderRelease(dataProv);
     
     CGPDFPageRef pageRef = CGPDFDocumentGetPage(docRef, page);
     
-    UIImage *image = [KGQuartzDrawing imageOfPage:pageRef scale:scale pageSize:pageSize];
+    UIImage *image = [KGQuartzDrawing imageOfPage:pageRef scale:scale];
     
     CGPDFDocumentRelease(docRef);
     
@@ -117,10 +113,6 @@
 }
 
 + (UIImage *)imageOfPage:(CGPDFPageRef)page scale:(CGFloat)scale {
-    return [KGQuartzDrawing imageOfPage:page scale:scale pageSize:nil];
-}
-
-+ (UIImage *)imageOfPage:(CGPDFPageRef)page scale:(CGFloat)scale pageSize:(CGSize *)pageSize {
     CGRect cropBoxRect = CGPDFPageGetBoxRect(page, kCGPDFCropBox);
     CGRect mediaBoxRect = CGPDFPageGetBoxRect(page, kCGPDFMediaBox);
     CGRect pageRect = CGRectIntersection(cropBoxRect, mediaBoxRect);
@@ -128,10 +120,6 @@
     
     pageRect.size = CGSizeMake(pageRect.size.width, pageRect.size.height);
     cropBoxRect.size = CGSizeMake(cropBoxRect.size.width*scale, cropBoxRect.size.height*scale);
-    
-    if (pageSize) {
-        *pageSize = cropBoxRect.size;
-    }
     
     UIGraphicsBeginImageContext(cropBoxRect.size);
     

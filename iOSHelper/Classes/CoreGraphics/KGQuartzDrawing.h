@@ -20,8 +20,6 @@
 + (UIImage *)image:(UIImage *)image withText:(NSString *)text drawAtPosition:(CGPoint)position fontSize:(CGFloat)fontSize color:(UIColor *)color;
 
 + (UIImage *)imageOfPdfData:(NSData *)data page:(int)page scale:(CGFloat)scale;
-+ (UIImage *)imageOfPdfData:(NSData *)data page:(int)page scale:(CGFloat)scale pageSize:(CGSize *)pageSize;
 + (UIImage *)imageOfPage:(CGPDFPageRef)page scale:(CGFloat)scale;
-+ (UIImage *)imageOfPage:(CGPDFPageRef)page scale:(CGFloat)scale pageSize:(CGSize *)pageSize;
 
 @end
