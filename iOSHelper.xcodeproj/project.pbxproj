@@ -23,6 +23,10 @@
 		025DB6221758D473007D81C0 /* NSString+KGAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 025DB6211758D473007D81C0 /* NSString+KGAdditions.m */; };
 		026C21B51746F8BD00F0DAA6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 026C21B41746F8BD00F0DAA6 /* Default-568h@2x.png */; };
 		02752F7417575539004ABF79 /* NSDate+KGAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 02752F7317575539004ABF79 /* NSDate+KGAdditions.m */; };
+		029CF3D3176B0BDD00FA607E /* iOSHelper.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 029CF3D2176B0BDD00FA607E /* iOSHelper.podspec */; };
+		029CF3D6176B0C7400FA607E /* UIImage+StackBlur.m in Sources */ = {isa = PBXBuildFile; fileRef = 029CF3D5176B0C7400FA607E /* UIImage+StackBlur.m */; };
+		029CF3D9176B0CAB00FA607E /* UIImage+Accelerate.m in Sources */ = {isa = PBXBuildFile; fileRef = 029CF3D8176B0CAB00FA607E /* UIImage+Accelerate.m */; };
+		029CF3DB176B154E00FA607E /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 029CF3DA176B154E00FA607E /* Accelerate.framework */; };
 		FCE6A5D7154E7B2D0027A21A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE6A5D6154E7B2D0027A21A /* UIKit.framework */; };
 		FCE6A5D9154E7B2D0027A21A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE6A5D8154E7B2D0027A21A /* Foundation.framework */; };
 		FCE6A5DB154E7B2D0027A21A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE6A5DA154E7B2D0027A21A /* CoreGraphics.framework */; };
@@ -66,6 +70,12 @@
 		026C21B61746F91100F0DAA6 /* iOSHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOSHelper.h; sourceTree = "<group>"; };
 		02752F7217575539004ABF79 /* NSDate+KGAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+KGAdditions.h"; sourceTree = "<group>"; };
 		02752F7317575539004ABF79 /* NSDate+KGAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+KGAdditions.m"; sourceTree = "<group>"; };
+		029CF3D2176B0BDD00FA607E /* iOSHelper.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iOSHelper.podspec; sourceTree = SOURCE_ROOT; };
+		029CF3D4176B0C7400FA607E /* UIImage+StackBlur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+StackBlur.h"; sourceTree = "<group>"; };
+		029CF3D5176B0C7400FA607E /* UIImage+StackBlur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+StackBlur.m"; sourceTree = "<group>"; };
+		029CF3D7176B0CAB00FA607E /* UIImage+Accelerate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Accelerate.h"; sourceTree = "<group>"; };
+		029CF3D8176B0CAB00FA607E /* UIImage+Accelerate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Accelerate.m"; sourceTree = "<group>"; };
+		029CF3DA176B154E00FA607E /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		02F8BCB5176092CF00DDAAD5 /* KGMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KGMacros.h; sourceTree = "<group>"; };
 		FCE6A5D2154E7B2D0027A21A /* iOSHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCE6A5D6154E7B2D0027A21A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -84,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				029CF3DB176B154E00FA607E /* Accelerate.framework in Frameworks */,
 				0227A2A61748D74A00CA6685 /* QuartzCore.framework in Frameworks */,
 				FCE6A5D7154E7B2D0027A21A /* UIKit.framework in Frameworks */,
 				FCE6A5D9154E7B2D0027A21A /* Foundation.framework in Frameworks */,
@@ -106,6 +117,10 @@
 		0227A28D1748D5D000CA6685 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				029CF3D4176B0C7400FA607E /* UIImage+StackBlur.h */,
+				029CF3D5176B0C7400FA607E /* UIImage+StackBlur.m */,
+				029CF3D7176B0CAB00FA607E /* UIImage+Accelerate.h */,
+				029CF3D8176B0CAB00FA607E /* UIImage+Accelerate.m */,
 				0227A28E1748D5D000CA6685 /* UIColor+KGAdditions.h */,
 				0227A28F1748D5D000CA6685 /* UIColor+KGAdditions.m */,
 				0227A2901748D5D000CA6685 /* UIView+KGAdditions.h */,
@@ -182,6 +197,7 @@
 		FCE6A5D5154E7B2D0027A21A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				029CF3DA176B154E00FA607E /* Accelerate.framework */,
 				0227A2A51748D74A00CA6685 /* QuartzCore.framework */,
 				FCE6A5D6154E7B2D0027A21A /* UIKit.framework */,
 				FCE6A5D8154E7B2D0027A21A /* Foundation.framework */,
@@ -204,6 +220,7 @@
 		FCE6A5DD154E7B2D0027A21A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				029CF3D2176B0BDD00FA607E /* iOSHelper.podspec */,
 				FCE6A5DE154E7B2D0027A21A /* iOSHelper-Info.plist */,
 				FCE6A5DF154E7B2D0027A21A /* InfoPlist.strings */,
 				FCE6A5E2154E7B2D0027A21A /* main.m */,
@@ -278,6 +295,7 @@
 			files = (
 				FCE6A5E1154E7B2D0027A21A /* InfoPlist.strings in Resources */,
 				026C21B51746F8BD00F0DAA6 /* Default-568h@2x.png in Resources */,
+				029CF3D3176B0BDD00FA607E /* iOSHelper.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +322,8 @@
 				025DB6221758D473007D81C0 /* NSString+KGAdditions.m in Sources */,
 				0234A273175A08E1006035C6 /* KGQuartzDrawing.m in Sources */,
 				0214CCFC176A046700F3F304 /* NSURL+KGAdditions.m in Sources */,
+				029CF3D6176B0C7400FA607E /* UIImage+StackBlur.m in Sources */,
+				029CF3D9176B0CAB00FA607E /* UIImage+Accelerate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

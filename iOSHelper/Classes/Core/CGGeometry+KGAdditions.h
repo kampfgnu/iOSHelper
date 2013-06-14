@@ -64,6 +64,13 @@ NS_INLINE CGRect KGRectSetSize(CGRect rect, CGSize size) {
 }
 
 /**
+ creates a rect from origin and size
+ */
+NS_INLINE CGRect KGRectFromPointAndSize(CGPoint point, CGSize size) {
+	return CGRectMake(point.x, point.y, size.width, size.height);
+}
+
+/**
  Translates the origin of a rect by creating a new origin (origin.x+point.x, origin.y+point.y)
  */
 NS_INLINE CGRect KGRectAddPoint(CGRect rect, CGPoint point) {
@@ -76,6 +83,20 @@ NS_INLINE CGRect KGRectAddPoint(CGRect rect, CGPoint point) {
 NS_INLINE CGPoint KGRectCenter(CGRect rect) {
 	return CGPointMake(CGRectGetMidX(rect), CGRectGetMidY(rect));
 }
+
+/**
+ Returns the top-left-point of a center-point relative to size
+ */
+NS_INLINE CGPoint KGPointTopLeftFromCenterAndSize(CGPoint center, CGSize size) {
+    CGPoint topLeft = CGPointZero;
+    
+    topLeft.x = center.x - size.width/2.f;
+    topLeft.y = center.y - size.height/2.f;
+    
+    return topLeft;
+}
+
+
 
 ////////////////////////////////////////////////////////////////////////
 #pragma mark - CGSize Helper

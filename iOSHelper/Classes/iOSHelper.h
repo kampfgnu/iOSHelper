@@ -22,3 +22,5 @@
 #import "UIView+Userdata.h"
 #import "KGQuartzDrawing.h"
 #import "NSURL+KGAdditions.h"
+#import "UIImage+StackBlur.h"
+#import "UIImage+Accelerate.h"
