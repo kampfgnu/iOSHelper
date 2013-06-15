@@ -12,7 +12,11 @@
 @implementation UIImage (Accelerate)
 
 + (UIImage *)blurredImageOfView:(UIView *)view blurLevel:(CGFloat)blurLevel {
-    UIImage *screenshot = [view imageRepresentation];
+    return [UIImage blurredImageOfView:view blurLevel:blurLevel darken:NO];
+}
+
++ (UIImage *)blurredImageOfView:(UIView *)view blurLevel:(CGFloat)blurLevel darken:(BOOL)darken {
+    UIImage *screenshot = darken ? [view darkerImageRepresentation] : [view imageRepresentation];
     return [UIImage blurredImage:screenshot blurLevel:blurLevel isJpg:NO];
 }
 

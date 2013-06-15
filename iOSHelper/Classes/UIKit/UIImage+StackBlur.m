@@ -49,7 +49,11 @@ inline static void zeroClearInt(int* p, size_t count) { memset(p, 0, sizeof(int)
 // by  Mario Klingemann
 
 + (UIImage *)blurredImageOfView:(UIView *)view inRadius:(CGFloat)inRadius {
-    UIImage *screenshot = [view imageRepresentation];
+    return [UIImage blurredImageOfView:view inRadius:inRadius darken:NO];
+}
+
++ (UIImage *)blurredImageOfView:(UIView *)view inRadius:(CGFloat)inRadius darken:(BOOL)darken {
+    UIImage *screenshot = darken ? [view darkerImageRepresentation] : [view imageRepresentation];
     return [UIImage blurredImage:screenshot inRadius:inRadius];
 }
 

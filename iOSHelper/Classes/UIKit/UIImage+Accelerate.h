@@ -11,6 +11,7 @@
 @interface UIImage (Accelerate)
 
 + (UIImage *)blurredImageOfView:(UIView *)view blurLevel:(CGFloat)blurLevel;
++ (UIImage *)blurredImageOfView:(UIView *)view blurLevel:(CGFloat)blurLevel darken:(BOOL)darken;
 + (UIImage *)blurredImage:(UIImage *)image blurLevel:(CGFloat)blur;
 + (UIImage *)blurredImage:(UIImage *)image blurLevel:(CGFloat)blur isJpg:(BOOL)isJpg;
 //needs to be a jpg UIImage!

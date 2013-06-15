@@ -13,6 +13,8 @@
 
 @interface UIImage (StackBlur) 
 
++ (UIImage *)blurredImageOfView:(UIView *)view inRadius:(CGFloat)inRadius;
++ (UIImage *)blurredImageOfView:(UIView *)view inRadius:(CGFloat)inRadius darken:(BOOL)darken;
 + (UIImage *)blurredImage:(UIImage *)image inRadius:(NSUInteger)inRadius;
 - (UIImage *)stackBlur:(NSUInteger)radius;
 - (UIImage *)normalize;

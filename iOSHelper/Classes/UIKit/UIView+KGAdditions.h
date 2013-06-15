@@ -186,6 +186,19 @@ typedef enum {
 - (UIImage *)imageRepresentation;
 
 /**
+ Returns an image representation of the current view, darkened with black color with alpha of 0.5
+ @return a UIImage with the contents of the view
+ */
+- (UIImage *)darkerImageRepresentation;
+
+/**
+ Returns an image darkened with black color with alpha of 0.5
+ @param image to be darkened
+ @return a UIImage with the contents of the view
+ */
++ (UIImage *)darkenImage:(UIImage *)image;
+
+/**
  Recursively sets the property 'scrollsToTop' to NO for all subviews of the given view.
  
  @param view the view, which subviews should not scrollToTop
