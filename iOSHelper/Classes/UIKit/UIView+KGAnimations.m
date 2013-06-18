@@ -34,20 +34,31 @@
 }
 
 - (void)setAlpha:(CGFloat)alpha duration:(NSTimeInterval)duration {
+    [self setAlpha:alpha duration:duration completion:nil];
+}
+
+- (void)setAlpha:(CGFloat)alpha duration:(NSTimeInterval)duration completion:(void (^)(BOOL finished))completion {
     [UIView animateWithDuration:duration
                           delay:0.0 
                         options:UIViewAnimationOptionAllowUserInteraction
                      animations:^{
                          self.alpha = alpha;
-                     } completion:nil];
+                     } completion:completion];
+}
+- (void)fadeIn {
+    [self fadeInWithCompletion:nil];
 }
 
-- (void)fadeIn {
-    [self setAlpha:1.f duration:kKGFadeDuration];
+- (void)fadeInWithCompletion:(void (^)(BOOL finished))completion {
+    [self setAlpha:1.f duration:kKGFadeDuration completion:completion];
 }
 
 - (void)fadeOut {
-	[self setAlpha:0.f duration:kKGFadeDuration];
+	[self fadeOutWithCompletion:nil];
+}
+
+- (void)fadeOutWithCompletion:(void (^)(BOOL finished))completion {
+    [self setAlpha:0.f duration:kKGFadeDuration completion:completion];
 }
 
 - (void)fadeOutAndRemoveFromSuperview {

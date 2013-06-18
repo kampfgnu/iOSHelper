@@ -22,7 +22,9 @@
 - (void)setAlpha:(CGFloat)alpha duration:(NSTimeInterval)duration;
 
 - (void)fadeIn;
+- (void)fadeInWithCompletion:(void (^)(BOOL finished))completion;
 - (void)fadeOut;
+- (void)fadeOutWithCompletion:(void (^)(BOOL finished))completion;
 - (void)fadeOutAndRemoveFromSuperview;
 
 @end

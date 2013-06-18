@@ -22,4 +22,8 @@
 + (UIImage *)imageOfPdfData:(NSData *)data page:(int)page scale:(CGFloat)scale;
 + (UIImage *)imageOfPage:(CGPDFPageRef)page scale:(CGFloat)scale;
 
++ (CGSize)cropBoxSizeOfCGPDFPageRef:(CGPDFPageRef)pageRef;
++ (CGSize)cropBoxSizeOfPDFData:(NSData *)data page:(int)page;
++ (CGSize)cropBoxSizeOfFirstPageWithPDFData:(NSData *)data;
+
 @end

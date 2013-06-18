@@ -148,4 +148,27 @@
     return image;
 }
 
++ (CGSize)cropBoxSizeOfCGPDFPageRef:(CGPDFPageRef)pageRef {
+    CGRect cropBoxRect = CGPDFPageGetBoxRect(pageRef, kCGPDFCropBox);
+    
+    return cropBoxRect.size;
+}
+
++ (CGSize)cropBoxSizeOfPDFData:(NSData *)data page:(int)page {
+    CGDataProviderRef dataProv = CGDataProviderCreateWithCFData((__bridge CFDataRef)data);
+    CGPDFDocumentRef docRef = CGPDFDocumentCreateWithProvider(dataProv);
+    CGDataProviderRelease(dataProv);
+    
+    CGPDFPageRef pageRef = CGPDFDocumentGetPage(docRef, page);
+    CGSize size = [self cropBoxSizeOfCGPDFPageRef:pageRef];
+    
+    CGPDFDocumentRelease(docRef);
+    
+    return size;
+}
+
++ (CGSize)cropBoxSizeOfFirstPageWithPDFData:(NSData *)data {
+    return [self cropBoxSizeOfPDFData:data page:1];
+}
+
 @end

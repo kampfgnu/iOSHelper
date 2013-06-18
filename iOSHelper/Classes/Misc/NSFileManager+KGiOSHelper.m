@@ -11,7 +11,7 @@
 
 #import "sys/xattr.h"
 
-#define KGNoBackupDirectory @".noBackup"
+#define KGNoBackupDirectory @"noBackup"
 
 @implementation NSFileManager (KGiOSHelper)
 
