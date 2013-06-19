@@ -24,3 +24,4 @@
 #import "NSURL+KGAdditions.h"
 #import "UIImage+StackBlur.h"
 #import "UIImage+Accelerate.h"
+#import "UIImage+Dsp.h"

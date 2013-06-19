@@ -27,6 +27,7 @@
 		029CF3D6176B0C7400FA607E /* UIImage+StackBlur.m in Sources */ = {isa = PBXBuildFile; fileRef = 029CF3D5176B0C7400FA607E /* UIImage+StackBlur.m */; };
 		029CF3D9176B0CAB00FA607E /* UIImage+Accelerate.m in Sources */ = {isa = PBXBuildFile; fileRef = 029CF3D8176B0CAB00FA607E /* UIImage+Accelerate.m */; };
 		029CF3DB176B154E00FA607E /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 029CF3DA176B154E00FA607E /* Accelerate.framework */; };
+		029D1FE11771A0F60032A441 /* UIImage+DSP.m in Sources */ = {isa = PBXBuildFile; fileRef = 029D1FE01771A0F60032A441 /* UIImage+DSP.m */; };
 		FCE6A5D7154E7B2D0027A21A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE6A5D6154E7B2D0027A21A /* UIKit.framework */; };
 		FCE6A5D9154E7B2D0027A21A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE6A5D8154E7B2D0027A21A /* Foundation.framework */; };
 		FCE6A5DB154E7B2D0027A21A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE6A5DA154E7B2D0027A21A /* CoreGraphics.framework */; };
@@ -76,6 +77,8 @@
 		029CF3D7176B0CAB00FA607E /* UIImage+Accelerate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Accelerate.h"; sourceTree = "<group>"; };
 		029CF3D8176B0CAB00FA607E /* UIImage+Accelerate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Accelerate.m"; sourceTree = "<group>"; };
 		029CF3DA176B154E00FA607E /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		029D1FDF1771A0F60032A441 /* UIImage+DSP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+DSP.h"; sourceTree = "<group>"; };
+		029D1FE01771A0F60032A441 /* UIImage+DSP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+DSP.m"; sourceTree = "<group>"; };
 		02F8BCB5176092CF00DDAAD5 /* KGMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KGMacros.h; sourceTree = "<group>"; };
 		FCE6A5D2154E7B2D0027A21A /* iOSHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCE6A5D6154E7B2D0027A21A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -117,6 +120,8 @@
 		0227A28D1748D5D000CA6685 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				029D1FDF1771A0F60032A441 /* UIImage+DSP.h */,
+				029D1FE01771A0F60032A441 /* UIImage+DSP.m */,
 				029CF3D4176B0C7400FA607E /* UIImage+StackBlur.h */,
 				029CF3D5176B0C7400FA607E /* UIImage+StackBlur.m */,
 				029CF3D7176B0CAB00FA607E /* UIImage+Accelerate.h */,
@@ -324,6 +329,7 @@
 				0214CCFC176A046700F3F304 /* NSURL+KGAdditions.m in Sources */,
 				029CF3D6176B0C7400FA607E /* UIImage+StackBlur.m in Sources */,
 				029CF3D9176B0CAB00FA607E /* UIImage+Accelerate.m in Sources */,
+				029D1FE11771A0F60032A441 /* UIImage+DSP.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
