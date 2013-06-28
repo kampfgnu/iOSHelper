@@ -28,6 +28,7 @@
 		029CF3D9176B0CAB00FA607E /* UIImage+Accelerate.m in Sources */ = {isa = PBXBuildFile; fileRef = 029CF3D8176B0CAB00FA607E /* UIImage+Accelerate.m */; };
 		029CF3DB176B154E00FA607E /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 029CF3DA176B154E00FA607E /* Accelerate.framework */; };
 		029D1FE11771A0F60032A441 /* UIImage+DSP.m in Sources */ = {isa = PBXBuildFile; fileRef = 029D1FE01771A0F60032A441 /* UIImage+DSP.m */; };
+		02C59161177D7F1C006FECD4 /* KGDrawEraseImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 02C59160177D7F1C006FECD4 /* KGDrawEraseImageView.m */; };
 		FCE6A5D7154E7B2D0027A21A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE6A5D6154E7B2D0027A21A /* UIKit.framework */; };
 		FCE6A5D9154E7B2D0027A21A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE6A5D8154E7B2D0027A21A /* Foundation.framework */; };
 		FCE6A5DB154E7B2D0027A21A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE6A5DA154E7B2D0027A21A /* CoreGraphics.framework */; };
@@ -79,6 +80,8 @@
 		029CF3DA176B154E00FA607E /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		029D1FDF1771A0F60032A441 /* UIImage+DSP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+DSP.h"; sourceTree = "<group>"; };
 		029D1FE01771A0F60032A441 /* UIImage+DSP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+DSP.m"; sourceTree = "<group>"; };
+		02C5915F177D7F1C006FECD4 /* KGDrawEraseImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGDrawEraseImageView.h; sourceTree = "<group>"; };
+		02C59160177D7F1C006FECD4 /* KGDrawEraseImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGDrawEraseImageView.m; sourceTree = "<group>"; };
 		02F8BCB5176092CF00DDAAD5 /* KGMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KGMacros.h; sourceTree = "<group>"; };
 		FCE6A5D2154E7B2D0027A21A /* iOSHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCE6A5D6154E7B2D0027A21A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -181,6 +184,15 @@
 			path = Audio;
 			sourceTree = "<group>";
 		};
+		02C5915E177D7F1C006FECD4 /* Subclasses */ = {
+			isa = PBXGroup;
+			children = (
+				02C5915F177D7F1C006FECD4 /* KGDrawEraseImageView.h */,
+				02C59160177D7F1C006FECD4 /* KGDrawEraseImageView.m */,
+			);
+			path = Subclasses;
+			sourceTree = "<group>";
+		};
 		FCE6A5C7154E7B2D0027A21A = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +249,7 @@
 		FCE6A5FA154E7BB00027A21A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				02C5915E177D7F1C006FECD4 /* Subclasses */,
 				0237E08417615C6300667727 /* Audio */,
 				026C21B61746F91100F0DAA6 /* iOSHelper.h */,
 				0234A270175A08E1006035C6 /* CoreGraphics */,
@@ -330,6 +343,7 @@
 				029CF3D6176B0C7400FA607E /* UIImage+StackBlur.m in Sources */,
 				029CF3D9176B0CAB00FA607E /* UIImage+Accelerate.m in Sources */,
 				029D1FE11771A0F60032A441 /* UIImage+DSP.m in Sources */,
+				02C59161177D7F1C006FECD4 /* KGDrawEraseImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -157,6 +157,13 @@ NS_INLINE CGPoint KGPointIntegral(CGPoint point) {
                        (CGFloat)round((double)point.y));
 }
 
+/**
+ Calculates the middle point between two CGPoints
+ */
+NS_INLINE CGPoint KGMidPointBetweenCGPoints(CGPoint p1, CGPoint p2) {
+    return CGPointMake((p1.x + p2.x) / 2, (p1.y + p2.y) / 2);
+}
+
 ////////////////////////////////////////////////////////////////////////
 #pragma mark - CGAffineTransform Helper
 ////////////////////////////////////////////////////////////////////////
