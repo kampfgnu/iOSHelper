@@ -1,0 +1,1 @@
+iOS helper classes for UIKit, FoundationKit and many other stuff that make life easier in almost every app.

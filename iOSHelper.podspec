@@ -1,6 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = "iOSHelper"
   s.version      = "0.0.1"
+  s.license      = { :type => 'zlib', :file => 'LICENCE.md' }
   s.summary      = "iOS helper classes for UIKit, FoundationKit and many other stuff that make life easier in almost every app."
   s.homepage     = "https://github.com/kampfgnu/iOSHelper"
   s.authors      = { "kampfgnu" => "heinilein@hotmail.com" }  
