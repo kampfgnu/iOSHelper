@@ -42,24 +42,11 @@
     _unerase = NO;
 }
 
-- (CGFloat)zoomScaleThatFits:(CGSize)target source:(CGSize)source {
-    CGFloat w_scale = (target.width / source.width);
-    CGFloat h_scale = (target.height / source.height);
-    
-    UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
-    if (UIInterfaceOrientationIsPortrait(orientation)) {
-        return ((w_scale < h_scale) ? w_scale : h_scale);
-    }
-    else {
-        return w_scale;
-    }
-}
-
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     UITouch *touch = [touches anyObject];
     
     if (_unerase && self.originalImage != nil) {
-        CGFloat scaleFactor = [self zoomScaleThatFits:self.originalImage.size source:self.frame.size];
+        CGFloat scaleFactor = KGZoomScaleThatFits(self.originalImage.size, self.frame.size);
         self.previousPoint1 = KGScalePoint([touch previousLocationInView:self], scaleFactor);
         self.previousPoint2 = self.previousPoint1;
         self.currentPoint = KGScalePoint([touch locationInView:self], scaleFactor);
@@ -75,7 +62,7 @@
     UITouch *touch = [touches anyObject];
     
     if (_unerase && self.originalImage != nil) {
-        CGFloat scaleFactor = [self zoomScaleThatFits:self.originalImage.size source:self.frame.size];
+        CGFloat scaleFactor = KGZoomScaleThatFits(self.originalImage.size, self.frame.size);
         self.previousPoint2 = self.previousPoint1;
         self.previousPoint1 = KGScalePoint([touch previousLocationInView:self], scaleFactor);
         self.currentPoint = KGScalePoint([touch locationInView:self], scaleFactor);
