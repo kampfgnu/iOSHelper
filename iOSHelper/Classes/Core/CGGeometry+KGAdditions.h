@@ -183,7 +183,7 @@ NS_INLINE CGPoint KGMidPointBetweenCGPoints(CGPoint p1, CGPoint p2) {
  Multiplies x and y with the given scale
  */
 NS_INLINE CGPoint KGScalePoint(CGPoint point, CGFloat scale) {
-    return CGPointMake((point.x * scale, point.y * scale);
+    return CGPointMake(point.x * scale, point.y * scale);
 }
 
 ////////////////////////////////////////////////////////////////////////
