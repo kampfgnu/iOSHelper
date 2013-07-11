@@ -11,5 +11,7 @@
 @interface KGDrawEraseImageView : UIImageView
 
 @property (nonatomic, readwrite) CGFloat lineWidth;
+@property (nonatomic, strong) UIImage *originalImage;
+@property (nonatomic, readwrite) BOOL unerase;
 
 @end

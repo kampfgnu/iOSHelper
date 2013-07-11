@@ -39,6 +39,7 @@
     self.userInteractionEnabled = YES;
     
     _lineWidth = 20.f;
+    _unerase = NO;
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -64,7 +65,7 @@
     CGContextRef context = UIGraphicsGetCurrentContext();
     [self.image drawInRect:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
     
-    CGContextSetBlendMode(context, kCGBlendModeClear);
+    CGContextSetBlendMode(context, _unerase ? kCGBlendModeNormal : kCGBlendModeClear);
     
     CGContextMoveToPoint(context, mid1.x, mid1.y);
     // Use QuadCurve is the key
@@ -72,7 +73,10 @@
     
     CGContextSetLineCap(context, kCGLineCapRound);
     CGContextSetLineWidth(context, _lineWidth);
-    [[UIColor clearColor] setStroke];
+    
+    if (_unerase) [[UIColor colorWithPatternImage:self.originalImage] setStroke];
+    else [[UIColor clearColor] setStroke];
+    
     CGContextStrokePath(context);
     
     self.image = UIGraphicsGetImageFromCurrentImageContext();

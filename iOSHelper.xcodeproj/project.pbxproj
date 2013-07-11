@@ -28,6 +28,9 @@
 		029CF3D9176B0CAB00FA607E /* UIImage+Accelerate.m in Sources */ = {isa = PBXBuildFile; fileRef = 029CF3D8176B0CAB00FA607E /* UIImage+Accelerate.m */; };
 		029CF3DB176B154E00FA607E /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 029CF3DA176B154E00FA607E /* Accelerate.framework */; };
 		029D1FE11771A0F60032A441 /* UIImage+DSP.m in Sources */ = {isa = PBXBuildFile; fileRef = 029D1FE01771A0F60032A441 /* UIImage+DSP.m */; };
+		02B6070A178EC1DC0078D790 /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02B60709178EC1DC0078D790 /* test.jpg */; };
+		02B6070C178EC7900078D790 /* test2.png in Resources */ = {isa = PBXBuildFile; fileRef = 02B6070B178EC7900078D790 /* test2.png */; };
+		02B6070E178EC7FE0078D790 /* transparent.png in Resources */ = {isa = PBXBuildFile; fileRef = 02B6070D178EC7FE0078D790 /* transparent.png */; };
 		02C59161177D7F1C006FECD4 /* KGDrawEraseImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 02C59160177D7F1C006FECD4 /* KGDrawEraseImageView.m */; };
 		FCE6A5D7154E7B2D0027A21A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE6A5D6154E7B2D0027A21A /* UIKit.framework */; };
 		FCE6A5D9154E7B2D0027A21A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE6A5D8154E7B2D0027A21A /* Foundation.framework */; };
@@ -80,6 +83,9 @@
 		029CF3DA176B154E00FA607E /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		029D1FDF1771A0F60032A441 /* UIImage+DSP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+DSP.h"; sourceTree = "<group>"; };
 		029D1FE01771A0F60032A441 /* UIImage+DSP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+DSP.m"; sourceTree = "<group>"; };
+		02B60709178EC1DC0078D790 /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
+		02B6070B178EC7900078D790 /* test2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test2.png; sourceTree = "<group>"; };
+		02B6070D178EC7FE0078D790 /* transparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = transparent.png; sourceTree = "<group>"; };
 		02C5915F177D7F1C006FECD4 /* KGDrawEraseImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGDrawEraseImageView.h; sourceTree = "<group>"; };
 		02C59160177D7F1C006FECD4 /* KGDrawEraseImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGDrawEraseImageView.m; sourceTree = "<group>"; };
 		02F8BCB5176092CF00DDAAD5 /* KGMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KGMacros.h; sourceTree = "<group>"; };
@@ -184,6 +190,16 @@
 			path = Audio;
 			sourceTree = "<group>";
 		};
+		02B60708178EC1DB0078D790 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				02B6070D178EC7FE0078D790 /* transparent.png */,
+				02B6070B178EC7900078D790 /* test2.png */,
+				02B60709178EC1DC0078D790 /* test.jpg */,
+			);
+			path = Media;
+			sourceTree = "<group>";
+		};
 		02C5915E177D7F1C006FECD4 /* Subclasses */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +242,7 @@
 		FCE6A5DC154E7B2D0027A21A /* iOSHelper */ = {
 			isa = PBXGroup;
 			children = (
+				02B60708178EC1DB0078D790 /* Media */,
 				FCE6A5E5154E7B2D0027A21A /* AppDelegate.h */,
 				FCE6A5E6154E7B2D0027A21A /* AppDelegate.m */,
 				FCE6A5FA154E7BB00027A21A /* Classes */,
@@ -314,6 +331,9 @@
 				FCE6A5E1154E7B2D0027A21A /* InfoPlist.strings in Resources */,
 				026C21B51746F8BD00F0DAA6 /* Default-568h@2x.png in Resources */,
 				029CF3D3176B0BDD00FA607E /* iOSHelper.podspec in Resources */,
+				02B6070A178EC1DC0078D790 /* test.jpg in Resources */,
+				02B6070C178EC7900078D790 /* test2.png in Resources */,
+				02B6070E178EC7FE0078D790 /* transparent.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
