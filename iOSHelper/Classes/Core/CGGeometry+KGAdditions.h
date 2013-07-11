@@ -127,6 +127,21 @@ NS_INLINE CGSize KGSizeIntegral(CGSize size) {
                       (CGFloat)round((double)size.height));
 }
 
+/**
+ Calculates the zoomScale that fits the target to the source depending on the current interface orientation of the device
+ */
+NS_INLINE CGFloat KGZoomScaleThatFits(CGSize target, CGSize source) {
+    CGFloat w_scale = (target.width / source.width);
+    CGFloat h_scale = (target.height / source.height);
+    
+    UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
+    if (UIInterfaceOrientationIsPortrait(orientation)) {
+        return ((w_scale < h_scale) ? w_scale : h_scale);
+    }
+    else {
+        return w_scale;
+    }
+}
 
 ////////////////////////////////////////////////////////////////////////
 #pragma mark - CGPoint Helper
@@ -162,6 +177,13 @@ NS_INLINE CGPoint KGPointIntegral(CGPoint point) {
  */
 NS_INLINE CGPoint KGMidPointBetweenCGPoints(CGPoint p1, CGPoint p2) {
     return CGPointMake((p1.x + p2.x) / 2, (p1.y + p2.y) / 2);
+}
+
+/**
+ Multiplies x and y with the given scale
+ */
+NS_INLINE CGPoint KGScalePoint(CGPoint point, CGFloat scale) {
+    return CGPointMake((point.x * scale, point.y * scale);
 }
 
 ////////////////////////////////////////////////////////////////////////

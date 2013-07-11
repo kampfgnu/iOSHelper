@@ -55,18 +55,14 @@
     }
 }
 
-- (CGPoint)scalePoint:(CGPoint)point scale:(CGFloat)scale {
-    return CGPointMake(point.x * scale, point.y * scale);
-}
-
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     UITouch *touch = [touches anyObject];
     
     if (_unerase && self.originalImage != nil) {
         CGFloat scaleFactor = [self zoomScaleThatFits:self.originalImage.size source:self.frame.size];
-        self.previousPoint1 = [self scalePoint:[touch previousLocationInView:self] scale:scaleFactor];
+        self.previousPoint1 = KGScalePoint([touch previousLocationInView:self], scaleFactor);
         self.previousPoint2 = self.previousPoint1;
-        self.currentPoint = [self scalePoint:[touch locationInView:self] scale:scaleFactor];
+        self.currentPoint = KGScalePoint([touch locationInView:self], scaleFactor);
     }
     else {
         self.previousPoint1 = [touch previousLocationInView:self];
@@ -81,8 +77,8 @@
     if (_unerase && self.originalImage != nil) {
         CGFloat scaleFactor = [self zoomScaleThatFits:self.originalImage.size source:self.frame.size];
         self.previousPoint2 = self.previousPoint1;
-        self.previousPoint1 = [self scalePoint:[touch previousLocationInView:self] scale:scaleFactor];
-        self.currentPoint = [self scalePoint:[touch locationInView:self] scale:scaleFactor];
+        self.previousPoint1 = KGScalePoint([touch previousLocationInView:self], scaleFactor);
+        self.currentPoint = KGScalePoint([touch locationInView:self], scaleFactor);
     }
     else {
         self.previousPoint2 = self.previousPoint1;
