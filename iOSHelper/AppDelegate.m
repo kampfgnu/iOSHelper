@@ -51,11 +51,14 @@
 //    NSLog(@"milliseconds: %f, seconds: %f, minutes: %f, hours: %f, days: %f", t.milliseconds, t.seconds, t.minutes, t.hours, t.days);
 //    NSLog(@"timeString: %@", t.timeString);
     
-    KGDrawEraseImageView *imgView = [[KGDrawEraseImageView alloc] initWithFrame:CGRectMake(0.f, 0.f, 500.f, 500.f)];
-    imgView.unerase = YES;
-    imgView.image = [UIImage imageNamed:@"transparent.png"];
-    imgView.originalImage = [UIImage imageNamed:@"test2.png"];
-    [self.window addSubview:imgView];
+//    KGDrawEraseImageView *imgView = [[KGDrawEraseImageView alloc] initWithFrame:CGRectMake(0.f, 0.f, 500.f, 500.f)];
+//    imgView.unerase = YES;
+//    imgView.image = [UIImage imageNamed:@"transparent.png"];
+//    imgView.originalImage = [UIImage imageNamed:@"test2.png"];
+//    [self.window addSubview:imgView];
+    
+    NSURL *url = [NSURL URLWithString:@"http://www.google.at?type=whatever"];
+    NSString *value = [url valueForParameter:@"type"];
     
 }
 

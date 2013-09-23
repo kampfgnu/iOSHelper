@@ -25,3 +25,4 @@
 #import "UIImage+StackBlur.h"
 #import "UIImage+Accelerate.h"
 #import "UIImage+Dsp.h"
+#import "NSURL+GETParameters.h"

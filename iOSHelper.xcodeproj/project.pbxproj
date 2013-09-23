@@ -23,6 +23,7 @@
 		025DB6221758D473007D81C0 /* NSString+KGAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 025DB6211758D473007D81C0 /* NSString+KGAdditions.m */; };
 		026C21B51746F8BD00F0DAA6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 026C21B41746F8BD00F0DAA6 /* Default-568h@2x.png */; };
 		02752F7417575539004ABF79 /* NSDate+KGAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 02752F7317575539004ABF79 /* NSDate+KGAdditions.m */; };
+		0275A17A17F08EBC008DFA7A /* NSURL+GETParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 0275A17917F08EBC008DFA7A /* NSURL+GETParameters.m */; };
 		029CF3D3176B0BDD00FA607E /* iOSHelper.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 029CF3D2176B0BDD00FA607E /* iOSHelper.podspec */; };
 		029CF3D6176B0C7400FA607E /* UIImage+StackBlur.m in Sources */ = {isa = PBXBuildFile; fileRef = 029CF3D5176B0C7400FA607E /* UIImage+StackBlur.m */; };
 		029CF3D9176B0CAB00FA607E /* UIImage+Accelerate.m in Sources */ = {isa = PBXBuildFile; fileRef = 029CF3D8176B0CAB00FA607E /* UIImage+Accelerate.m */; };
@@ -75,6 +76,8 @@
 		026C21B61746F91100F0DAA6 /* iOSHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOSHelper.h; sourceTree = "<group>"; };
 		02752F7217575539004ABF79 /* NSDate+KGAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+KGAdditions.h"; sourceTree = "<group>"; };
 		02752F7317575539004ABF79 /* NSDate+KGAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+KGAdditions.m"; sourceTree = "<group>"; };
+		0275A17817F08EBC008DFA7A /* NSURL+GETParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+GETParameters.h"; sourceTree = "<group>"; };
+		0275A17917F08EBC008DFA7A /* NSURL+GETParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+GETParameters.m"; sourceTree = "<group>"; };
 		029CF3D2176B0BDD00FA607E /* iOSHelper.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iOSHelper.podspec; sourceTree = SOURCE_ROOT; };
 		029CF3D4176B0C7400FA607E /* UIImage+StackBlur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+StackBlur.h"; sourceTree = "<group>"; };
 		029CF3D5176B0C7400FA607E /* UIImage+StackBlur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+StackBlur.m"; sourceTree = "<group>"; };
@@ -157,6 +160,8 @@
 		0227A2A71748D7F500CA6685 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				0275A17817F08EBC008DFA7A /* NSURL+GETParameters.h */,
+				0275A17917F08EBC008DFA7A /* NSURL+GETParameters.m */,
 				025DB6201758D473007D81C0 /* NSString+KGAdditions.h */,
 				025DB6211758D473007D81C0 /* NSString+KGAdditions.m */,
 				02752F7217575539004ABF79 /* NSDate+KGAdditions.h */,
@@ -303,7 +308,7 @@
 		FCE6A5C9154E7B2D0027A21A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = NOUS;
 			};
 			buildConfigurationList = FCE6A5CC154E7B2D0027A21A /* Build configuration list for PBXProject "iOSHelper" */;
@@ -350,6 +355,7 @@
 				0227A29E1748D5D000CA6685 /* UIView+KGAdditions.m in Sources */,
 				0227A29F1748D5D000CA6685 /* UIView+KGAnimations.m in Sources */,
 				0227A2A01748D5D000CA6685 /* UIView+KGHierarchy.m in Sources */,
+				0275A17A17F08EBC008DFA7A /* NSURL+GETParameters.m in Sources */,
 				0227A2A11748D5D000CA6685 /* UIView+KGInnerShadow.m in Sources */,
 				0227A2A21748D5D000CA6685 /* UIView+KGNoise.m in Sources */,
 				0227A2A31748D5D000CA6685 /* UIView+Userdata.m in Sources */,
@@ -385,9 +391,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -402,10 +409,14 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -415,9 +426,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -425,8 +437,11 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";

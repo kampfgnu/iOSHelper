@@ -71,7 +71,7 @@
     int h = image.size.height;
 	
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-    CGContextRef context = CGBitmapContextCreate(NULL, w, h, 8, 4 * w, colorSpace, kCGImageAlphaPremultipliedFirst);
+    CGContextRef context = CGBitmapContextCreate(NULL, w, h, 8, 4 * w, colorSpace, (CGBitmapInfo)kCGImageAlphaPremultipliedFirst);
     
     CGContextDrawImage(context, CGRectMake(0, 0, w, h), image.CGImage);
     CGContextSetRGBFillColor(context, 0.0, 0.0, 1.0, 1);

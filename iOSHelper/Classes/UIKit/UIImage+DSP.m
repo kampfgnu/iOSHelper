@@ -314,7 +314,7 @@ CGContextAndDataRef _dsp_utils_CreateARGBBitmapContext (CGImageRef inImage)
                                      8,
                                      bitmapBytesPerRow,
                                      colorSpace,
-                                     kCGImageAlphaPremultipliedFirst);
+                                     (CGBitmapInfo)kCGImageAlphaPremultipliedFirst);
     if (context == NULL)
     {
         free (bitmapData);

@@ -112,7 +112,7 @@ static UIImage * KG_noiseImage;
         NSUInteger imageDimension = (NSUInteger)(imageScale * kKGNoiseTileDimension);
         
         CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-        CGContextRef context = CGBitmapContextCreate(nil,imageDimension,imageDimension,8,0,colorSpace,kCGImageAlphaPremultipliedLast);
+        CGContextRef context = CGBitmapContextCreate(nil,imageDimension,imageDimension,8,0,colorSpace,kCGBitmapAlphaInfoMask & kCGImageAlphaPremultipliedLast);
         CFRelease(colorSpace);
         
         for (NSUInteger i=0; i<(kKGNoiseTileDimension * kKGNoiseIntensity); i++) {
