@@ -12,5 +12,6 @@
 
 - (NSString *)valueForParameter:(NSString *)parameter;
 - (NSDictionary *)parameterDictionary;
+- (NSString *)stringWithoutGETParameters;
 
 @end

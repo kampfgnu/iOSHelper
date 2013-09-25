@@ -17,8 +17,7 @@
 }
 
 - (NSDictionary *)parameterDictionary {
-    NSString *string = [[self.absoluteString stringByReplacingOccurrencesOfString:@"+" withString:@" "]
-                         stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSString *string = [self scannableString];
     NSScanner *scanner = [NSScanner scannerWithString:string];
     [scanner setCharactersToBeSkipped:[NSCharacterSet characterSetWithCharactersInString:@"&?"]];
     
@@ -33,6 +32,21 @@
     }
     
     return dict;
+}
+
+- (NSString *)scannableString {
+    return [[self.absoluteString stringByReplacingOccurrencesOfString:@"+" withString:@" "]
+            stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+}
+
+- (NSString *)stringWithoutGETParameters {
+    NSString *string = [self scannableString];
+    NSScanner *scanner = [NSScanner scannerWithString:string];
+    
+    NSString *outputString = nil;
+    [scanner scanUpToString:@"?" intoString:&outputString];
+    
+    return outputString;
 }
 
 @end
