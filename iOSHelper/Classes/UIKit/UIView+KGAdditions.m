@@ -201,6 +201,14 @@
 	self.center = CGPointMake(self.superview.boundsWidth/2.f, self.superview.boundsHeight/2.f);
 }
 
+- (void)moveToCenterOfSuperviewHorizontally {
+	self.center = CGPointMake(self.superview.boundsWidth/2.f, self.center.y);
+}
+
+- (void)moveToCenterOfSuperviewVertically {
+	self.center = CGPointMake(self.center.x, self.superview.boundsHeight/2.f);
+}
+
 ////////////////////////////////////////////////////////////////////////
 #pragma mark - Shadows/Borders
 ////////////////////////////////////////////////////////////////////////

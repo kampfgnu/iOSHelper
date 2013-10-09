@@ -136,6 +136,16 @@ typedef enum {
 - (void)moveToCenterOfSuperview;
 
 /**
+ Centers the view horizontally within it's superview
+ */
+- (void)moveToCenterOfSuperviewHorizontally;
+
+/**
+ Centers the view vertically within it's superview
+ */
+- (void)moveToCenterOfSuperviewVertically;
+
+/**
  Sets a border on the view's layer with the specified width and color. The cornerRadius is set to 0.
  @param borderWidth the width of the border
  @param borderColor the color of the border
