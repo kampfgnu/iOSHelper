@@ -33,6 +33,7 @@
 		02B6070C178EC7900078D790 /* test2.png in Resources */ = {isa = PBXBuildFile; fileRef = 02B6070B178EC7900078D790 /* test2.png */; };
 		02B6070E178EC7FE0078D790 /* transparent.png in Resources */ = {isa = PBXBuildFile; fileRef = 02B6070D178EC7FE0078D790 /* transparent.png */; };
 		02C59161177D7F1C006FECD4 /* KGDrawEraseImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 02C59160177D7F1C006FECD4 /* KGDrawEraseImageView.m */; };
+		02D68B651805713B00925B96 /* KGGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D68B641805713B00925B96 /* KGGradientView.m */; };
 		FCE6A5D7154E7B2D0027A21A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE6A5D6154E7B2D0027A21A /* UIKit.framework */; };
 		FCE6A5D9154E7B2D0027A21A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE6A5D8154E7B2D0027A21A /* Foundation.framework */; };
 		FCE6A5DB154E7B2D0027A21A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE6A5DA154E7B2D0027A21A /* CoreGraphics.framework */; };
@@ -91,6 +92,8 @@
 		02B6070D178EC7FE0078D790 /* transparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = transparent.png; sourceTree = "<group>"; };
 		02C5915F177D7F1C006FECD4 /* KGDrawEraseImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGDrawEraseImageView.h; sourceTree = "<group>"; };
 		02C59160177D7F1C006FECD4 /* KGDrawEraseImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGDrawEraseImageView.m; sourceTree = "<group>"; };
+		02D68B631805713B00925B96 /* KGGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGradientView.h; sourceTree = "<group>"; };
+		02D68B641805713B00925B96 /* KGGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGradientView.m; sourceTree = "<group>"; };
 		02F8BCB5176092CF00DDAAD5 /* KGMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KGMacros.h; sourceTree = "<group>"; };
 		FCE6A5D2154E7B2D0027A21A /* iOSHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCE6A5D6154E7B2D0027A21A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -210,6 +213,8 @@
 			children = (
 				02C5915F177D7F1C006FECD4 /* KGDrawEraseImageView.h */,
 				02C59160177D7F1C006FECD4 /* KGDrawEraseImageView.m */,
+				02D68B631805713B00925B96 /* KGGradientView.h */,
+				02D68B641805713B00925B96 /* KGGradientView.m */,
 			);
 			path = Subclasses;
 			sourceTree = "<group>";
@@ -361,6 +366,7 @@
 				0227A2A31748D5D000CA6685 /* UIView+Userdata.m in Sources */,
 				0227A2AE1748D7F500CA6685 /* KGTimeConverter.m in Sources */,
 				0227A2AF1748D7F500CA6685 /* KGWindow.m in Sources */,
+				02D68B651805713B00925B96 /* KGGradientView.m in Sources */,
 				0227A2B01748D7F500CA6685 /* NSFileManager+KGiOSHelper.m in Sources */,
 				02752F7417575539004ABF79 /* NSDate+KGAdditions.m in Sources */,
 				025DB6221758D473007D81C0 /* NSString+KGAdditions.m in Sources */,

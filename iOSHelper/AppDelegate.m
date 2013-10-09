@@ -9,8 +9,11 @@
 #import "AppDelegate.h"
 
 #import "KGDrawEraseImageView.h"
+#import "KGGradientView.h"
 
 @interface AppDelegate ()
+
+@property (nonatomic, strong) UIViewController *vc;
 
 - (void)test;
 
@@ -25,8 +28,11 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
+    
+    _vc = [[UIViewController alloc] initWithNibName:nil bundle:nil];
+    self.window.rootViewController = _vc;
     [self.window makeKeyAndVisible];
-
+    
     [self test];
     
 //    NSDate *date = [NSDate dateFromHTTPDateString:@"Wed, 29 May 2013 12:34:01 GMT"];
@@ -57,9 +63,12 @@
 //    imgView.originalImage = [UIImage imageNamed:@"test2.png"];
 //    [self.window addSubview:imgView];
     
-    NSURL *url = [NSURL URLWithString:@"http://www.google.at?type=whatever"];
-    NSString *value = [url valueForParameter:@"type"];
+//    NSURL *url = [NSURL URLWithString:@"http://www.google.at?type=whatever"];
+//    NSString *value = [url valueForParameter:@"type"];
     
+//    KGGradientView *g = [[KGGradientView alloc] initWithFrame:CGRectMake(0.f, 0.f, 200.f, 400.f) colors:@[[UIColor redColor], [UIColor blueColor]] locations:@[@0, @0.2, @0.8, @1]];
+//    g.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+//    [_vc.view addSubview:g];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
