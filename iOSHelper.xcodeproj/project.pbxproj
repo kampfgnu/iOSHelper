@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0214CCFC176A046700F3F304 /* NSURL+KGAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0214CCFB176A046700F3F304 /* NSURL+KGAdditions.m */; };
+		021ADDC218081A3600F1C8B8 /* KGCircleProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 021ADDC118081A3600F1C8B8 /* KGCircleProgressView.m */; };
 		0227A29D1748D5D000CA6685 /* UIColor+KGAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0227A28F1748D5D000CA6685 /* UIColor+KGAdditions.m */; };
 		0227A29E1748D5D000CA6685 /* UIView+KGAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0227A2911748D5D000CA6685 /* UIView+KGAdditions.m */; };
 		0227A29F1748D5D000CA6685 /* UIView+KGAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = 0227A2931748D5D000CA6685 /* UIView+KGAnimations.m */; };
@@ -45,6 +46,8 @@
 /* Begin PBXFileReference section */
 		0214CCFA176A046700F3F304 /* NSURL+KGAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+KGAdditions.h"; sourceTree = "<group>"; };
 		0214CCFB176A046700F3F304 /* NSURL+KGAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+KGAdditions.m"; sourceTree = "<group>"; };
+		021ADDC018081A3600F1C8B8 /* KGCircleProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGCircleProgressView.h; sourceTree = "<group>"; };
+		021ADDC118081A3600F1C8B8 /* KGCircleProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGCircleProgressView.m; sourceTree = "<group>"; };
 		0227A28B1748D5D000CA6685 /* CGGeometry+KGAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CGGeometry+KGAdditions.h"; sourceTree = "<group>"; };
 		0227A28C1748D5D000CA6685 /* KGMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGMath.h; sourceTree = "<group>"; };
 		0227A28E1748D5D000CA6685 /* UIColor+KGAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+KGAdditions.h"; sourceTree = "<group>"; };
@@ -215,6 +218,8 @@
 				02C59160177D7F1C006FECD4 /* KGDrawEraseImageView.m */,
 				02D68B631805713B00925B96 /* KGGradientView.h */,
 				02D68B641805713B00925B96 /* KGGradientView.m */,
+				021ADDC018081A3600F1C8B8 /* KGCircleProgressView.h */,
+				021ADDC118081A3600F1C8B8 /* KGCircleProgressView.m */,
 			);
 			path = Subclasses;
 			sourceTree = "<group>";
@@ -360,6 +365,7 @@
 				0227A29E1748D5D000CA6685 /* UIView+KGAdditions.m in Sources */,
 				0227A29F1748D5D000CA6685 /* UIView+KGAnimations.m in Sources */,
 				0227A2A01748D5D000CA6685 /* UIView+KGHierarchy.m in Sources */,
+				021ADDC218081A3600F1C8B8 /* KGCircleProgressView.m in Sources */,
 				0275A17A17F08EBC008DFA7A /* NSURL+GETParameters.m in Sources */,
 				0227A2A11748D5D000CA6685 /* UIView+KGInnerShadow.m in Sources */,
 				0227A2A21748D5D000CA6685 /* UIView+KGNoise.m in Sources */,

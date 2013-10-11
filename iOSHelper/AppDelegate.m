@@ -10,10 +10,12 @@
 
 #import "KGDrawEraseImageView.h"
 #import "KGGradientView.h"
+#import "KGCircleProgressView.h"
 
 @interface AppDelegate ()
 
 @property (nonatomic, strong) UIViewController *vc;
+@property (nonatomic, strong) KGCircleProgressView *c;
 
 - (void)test;
 
@@ -69,6 +71,18 @@
 //    KGGradientView *g = [[KGGradientView alloc] initWithFrame:CGRectMake(0.f, 0.f, 200.f, 400.f) colors:@[[UIColor redColor], [UIColor blueColor]] locations:@[@0, @0.2, @0.8, @1]];
 //    g.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 //    [_vc.view addSubview:g];
+    
+//    _c = [[KGCircleProgressView alloc] initWithFrame:CGRectMake(100.f, 100.f, 50.f, 50.f)];
+//    _c.backgroundColor = [UIColor redColor];
+//    [_vc.view addSubview:_c];
+//    [_c updateProgress:0.4];
+//    [self performSelector:@selector(updateProgress:) withObject:@0.5 afterDelay:1.0];
+//    [self performSelector:@selector(updateProgress:) withObject:@0.9 afterDelay:2.0];
+//    [self performSelector:@selector(updateProgress:) withObject:@1.0 afterDelay:2.0];
+}
+
+- (void)updateProgress:(NSNumber *)number {
+    [_c updateProgress:[number floatValue]];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
