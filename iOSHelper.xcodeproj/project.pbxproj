@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0214CCFC176A046700F3F304 /* NSURL+KGAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0214CCFB176A046700F3F304 /* NSURL+KGAdditions.m */; };
+		0216562F186052B700906CBB /* KGDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0216562E186052B700906CBB /* KGDeviceInfo.m */; };
 		021ADDC218081A3600F1C8B8 /* KGCircleProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 021ADDC118081A3600F1C8B8 /* KGCircleProgressView.m */; };
 		0227A29D1748D5D000CA6685 /* UIColor+KGAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0227A28F1748D5D000CA6685 /* UIColor+KGAdditions.m */; };
 		0227A29E1748D5D000CA6685 /* UIView+KGAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0227A2911748D5D000CA6685 /* UIView+KGAdditions.m */; };
@@ -46,6 +47,8 @@
 /* Begin PBXFileReference section */
 		0214CCFA176A046700F3F304 /* NSURL+KGAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+KGAdditions.h"; sourceTree = "<group>"; };
 		0214CCFB176A046700F3F304 /* NSURL+KGAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+KGAdditions.m"; sourceTree = "<group>"; };
+		0216562D186052B700906CBB /* KGDeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGDeviceInfo.h; sourceTree = "<group>"; };
+		0216562E186052B700906CBB /* KGDeviceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGDeviceInfo.m; sourceTree = "<group>"; };
 		021ADDC018081A3600F1C8B8 /* KGCircleProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGCircleProgressView.h; sourceTree = "<group>"; };
 		021ADDC118081A3600F1C8B8 /* KGCircleProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGCircleProgressView.m; sourceTree = "<group>"; };
 		0227A28B1748D5D000CA6685 /* CGGeometry+KGAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CGGeometry+KGAdditions.h"; sourceTree = "<group>"; };
@@ -181,6 +184,8 @@
 				02F8BCB5176092CF00DDAAD5 /* KGMacros.h */,
 				0214CCFA176A046700F3F304 /* NSURL+KGAdditions.h */,
 				0214CCFB176A046700F3F304 /* NSURL+KGAdditions.m */,
+				0216562D186052B700906CBB /* KGDeviceInfo.h */,
+				0216562E186052B700906CBB /* KGDeviceInfo.m */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -382,6 +387,7 @@
 				029CF3D9176B0CAB00FA607E /* UIImage+Accelerate.m in Sources */,
 				029D1FE11771A0F60032A441 /* UIImage+DSP.m in Sources */,
 				02C59161177D7F1C006FECD4 /* KGDrawEraseImageView.m in Sources */,
+				0216562F186052B700906CBB /* KGDeviceInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

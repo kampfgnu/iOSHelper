@@ -11,6 +11,7 @@
 #import "KGDrawEraseImageView.h"
 #import "KGGradientView.h"
 #import "KGCircleProgressView.h"
+#import "KGDeviceInfo.h"
 
 @interface AppDelegate ()
 
@@ -29,7 +30,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    
+    [KGDeviceInfo printAll];
     
     _vc = [[UIViewController alloc] initWithNibName:nil bundle:nil];
     self.window.rootViewController = _vc;
