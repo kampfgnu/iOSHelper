@@ -24,6 +24,8 @@
 		0234A273175A08E1006035C6 /* KGQuartzDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = 0234A272175A08E1006035C6 /* KGQuartzDrawing.m */; };
 		025DB6221758D473007D81C0 /* NSString+KGAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 025DB6211758D473007D81C0 /* NSString+KGAdditions.m */; };
 		026C21B51746F8BD00F0DAA6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 026C21B41746F8BD00F0DAA6 /* Default-568h@2x.png */; };
+		026C387318C0B3CF003B569A /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 026C387218C0B3CF003B569A /* ImageIO.framework */; };
+		026C387518C0B3D4003B569A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 026C387418C0B3D4003B569A /* MobileCoreServices.framework */; };
 		02752F7417575539004ABF79 /* NSDate+KGAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 02752F7317575539004ABF79 /* NSDate+KGAdditions.m */; };
 		0275A17A17F08EBC008DFA7A /* NSURL+GETParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 0275A17917F08EBC008DFA7A /* NSURL+GETParameters.m */; };
 		029CF3D3176B0BDD00FA607E /* iOSHelper.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 029CF3D2176B0BDD00FA607E /* iOSHelper.podspec */; };
@@ -81,6 +83,8 @@
 		025DB6211758D473007D81C0 /* NSString+KGAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+KGAdditions.m"; sourceTree = "<group>"; };
 		026C21B41746F8BD00F0DAA6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		026C21B61746F91100F0DAA6 /* iOSHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOSHelper.h; sourceTree = "<group>"; };
+		026C387218C0B3CF003B569A /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		026C387418C0B3D4003B569A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		02752F7217575539004ABF79 /* NSDate+KGAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+KGAdditions.h"; sourceTree = "<group>"; };
 		02752F7317575539004ABF79 /* NSDate+KGAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+KGAdditions.m"; sourceTree = "<group>"; };
 		0275A17817F08EBC008DFA7A /* NSURL+GETParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+GETParameters.h"; sourceTree = "<group>"; };
@@ -118,6 +122,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				026C387518C0B3D4003B569A /* MobileCoreServices.framework in Frameworks */,
+				026C387318C0B3CF003B569A /* ImageIO.framework in Frameworks */,
 				029CF3DB176B154E00FA607E /* Accelerate.framework in Frameworks */,
 				0227A2A61748D74A00CA6685 /* QuartzCore.framework in Frameworks */,
 				FCE6A5D7154E7B2D0027A21A /* UIKit.framework in Frameworks */,
@@ -250,6 +256,8 @@
 		FCE6A5D5154E7B2D0027A21A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				026C387418C0B3D4003B569A /* MobileCoreServices.framework */,
+				026C387218C0B3CF003B569A /* ImageIO.framework */,
 				029CF3DA176B154E00FA607E /* Accelerate.framework */,
 				0227A2A51748D74A00CA6685 /* QuartzCore.framework */,
 				FCE6A5D6154E7B2D0027A21A /* UIKit.framework */,
