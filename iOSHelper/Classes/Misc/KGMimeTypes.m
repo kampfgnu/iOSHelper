@@ -20,13 +20,13 @@
 
 + (NSString *)fileExtensionForMimeType:(NSString *)mimeType {
     NSMutableDictionary *dict = [KGMimeTypes mimeTypes];
-    NSString *fileExtension = [dict valueForKey:mimeType];
+    NSString *fileExtension = [dict valueForKey:[mimeType lowercaseString]];
     return fileExtension != nil ? fileExtension : @"xxx";
 }
 
 + (NSString *)mimeTypeForFileExtension:(NSString *)fileExtension {
     NSMutableDictionary *dict = [KGMimeTypes mimeTypes];
-    NSArray *array = [dict allKeysForObject:fileExtension];
+    NSArray *array = [dict allKeysForObject:[fileExtension lowercaseString]];
     if (array.count > 0) return [array objectAtIndex:0];
     else return @"type/unknown";
 }
