@@ -113,6 +113,8 @@
 + (CGImageRef)thumbImageRefFromImageAtFilepath:(NSString *)filepath size:(CGSize)size {
     NSURL *url = [NSURL fileURLWithPath:filepath];
     CGImageSourceRef imageSource = CGImageSourceCreateWithURL((__bridge CFURLRef)url, NULL);
+    if (imageSource == NULL) return NULL;
+    
     CGImageRef imageRef = [KGQuartzDrawing thumbImageRefFromImageSource:imageSource size:size];
     CFRelease(imageSource);
     
@@ -120,6 +122,8 @@
 }
 
 + (CGImageRef)thumbImageRefFromImageData:(NSData *)data size:(CGSize)size {
+    if (data == nil) return NULL;
+    
     CGImageSourceRef imageSource = CGImageSourceCreateWithData((__bridge CFDataRef)data, NULL);
     CGImageRef imageRef = [KGQuartzDrawing thumbImageRefFromImageSource:imageSource size:size];
     CFRelease(imageSource);
@@ -128,6 +132,8 @@
 }
 
 + (CGImageRef)thumbImageRefFromImageSource:(CGImageSourceRef)imageSource size:(CGSize)size {
+    if (imageSource == NULL) return NULL;
+    
     CGImageRef thumbnail = NULL;
     
     NSDictionary* d = [NSDictionary dictionaryWithObjectsAndKeys:
@@ -148,6 +154,8 @@
 }
 
 + (BOOL)writeImageRef:(CGImageRef)imageRef toFilepath:(NSString *)toFilepath {
+    if (imageRef == NULL) return NO;
+    
     CFURLRef url = (__bridge CFURLRef)[NSURL fileURLWithPath:toFilepath];
     CGImageDestinationRef destination = CGImageDestinationCreateWithURL(url, kUTTypePNG, 1, NULL);
     CGImageDestinationAddImage(destination, imageRef, nil);
