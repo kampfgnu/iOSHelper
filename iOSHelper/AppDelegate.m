@@ -12,6 +12,7 @@
 #import "KGGradientView.h"
 #import "KGCircleProgressView.h"
 #import "KGDeviceInfo.h"
+#import "KGMimeTypes.h"
 
 @interface AppDelegate ()
 
