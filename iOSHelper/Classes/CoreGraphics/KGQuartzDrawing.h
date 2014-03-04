@@ -20,8 +20,10 @@
 + (UIImage *)image:(UIImage *)image withText:(NSString *)text drawAtPosition:(CGPoint)position fontSize:(CGFloat)fontSize color:(UIColor *)color;
 
 + (BOOL)writeThumbnailOfImageAtFilepath:(NSString *)filepath toFilepath:(NSString *)toFilepath size:(CGSize)size;
++ (BOOL)writeThumbnailOfImageData:(NSData *)data toFilepath:(NSString *)toFilepath size:(CGSize)size;
 + (UIImage *)thumbnailOfImageAtFilepath:(NSString *)filepath size:(CGSize)size;
 + (CGImageRef)thumbImageRefFromImageAtFilepath:(NSString *)filepath size:(CGSize)size;
++ (CGImageRef)thumbImageRefFromImageData:(NSData *)data size:(CGSize)size;
 + (BOOL)writeImageRef:(CGImageRef)imageRef toFilepath:(NSString *)toFilepath;
 
 + (UIImage *)imageOfPdfData:(NSData *)data page:(int)page scale:(CGFloat)scale;

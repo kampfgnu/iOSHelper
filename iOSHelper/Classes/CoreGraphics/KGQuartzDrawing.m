@@ -101,63 +101,50 @@
     return [KGQuartzDrawing writeImageRef:imageRef toFilepath:toFilepath];
 }
 
++ (BOOL)writeThumbnailOfImageData:(NSData *)data toFilepath:(NSString *)toFilepath size:(CGSize)size {
+    CGImageRef imageRef = [KGQuartzDrawing thumbImageRefFromImageData:data size:size];
+    return [KGQuartzDrawing writeImageRef:imageRef toFilepath:toFilepath];
+}
+
 + (UIImage *)thumbnailOfImageAtFilepath:(NSString *)filepath size:(CGSize)size {
     return [UIImage imageWithCGImage:[KGQuartzDrawing thumbImageRefFromImageAtFilepath:filepath size:size]];
 }
 
 + (CGImageRef)thumbImageRefFromImageAtFilepath:(NSString *)filepath size:(CGSize)size {
     NSURL *url = [NSURL fileURLWithPath:filepath];
+    CGImageSourceRef imageSource = CGImageSourceCreateWithURL((__bridge CFURLRef)url, NULL);
+    CGImageRef imageRef = [KGQuartzDrawing thumbImageRefFromImageSource:imageSource size:size];
+    CFRelease(imageSource);
     
-    CGImageRef        myThumbnailImage = NULL;
-    CGImageSourceRef  myImageSource;
-    CFDictionaryRef   myOptions = NULL;
-    CFStringRef       myKeys[3];
-    CFTypeRef         myValues[3];
-    CFNumberRef       thumbnailSize;
+    return imageRef;
+}
+
++ (CGImageRef)thumbImageRefFromImageData:(NSData *)data size:(CGSize)size {
+    CGImageSourceRef imageSource = CGImageSourceCreateWithData((__bridge CFDataRef)data, NULL);
+    CGImageRef imageRef = [KGQuartzDrawing thumbImageRefFromImageSource:imageSource size:size];
+    CFRelease(imageSource);
     
-    // Create an image source from NSData; no options.
-    myImageSource = CGImageSourceCreateWithURL((__bridge CFURLRef)url, myOptions);
-    //    myImageSource = CGImageSourceCreateWithData((CFDataRef)data, NULL);
-    // Make sure the image source exists before continuing.
-    if (myImageSource == NULL){
-        fprintf(stderr, "Image source is NULL.");
-        return  NULL;
-    }
+    return imageRef;
+}
+
++ (CGImageRef)thumbImageRefFromImageSource:(CGImageSourceRef)imageSource size:(CGSize)size {
+    CGImageRef thumbnail = NULL;
     
-    // Package the integer as a  CFNumber object. Using CFTypes allows you
-    // to more easily create the options dictionary later.
-    thumbnailSize = CFNumberCreate(NULL, kCFNumberIntType, &size);
-    
-    // Set up the thumbnail options.
-    myKeys[0] = kCGImageSourceCreateThumbnailWithTransform;
-    myValues[0] = (CFTypeRef)kCFBooleanTrue;
-    myKeys[1] = kCGImageSourceCreateThumbnailFromImageIfAbsent;
-    myValues[1] = (CFTypeRef)kCFBooleanTrue;
-    myKeys[2] = kCGImageSourceThumbnailMaxPixelSize;
-    myValues[2] = (CFTypeRef)thumbnailSize;
-    
-    myOptions = CFDictionaryCreate(NULL, (const void **) myKeys,
-                                   (const void **) myValues, 2,
-                                   &kCFTypeDictionaryKeyCallBacks,
-                                   & kCFTypeDictionaryValueCallBacks);
-    
-    // Create the thumbnail image using the specified options.
-    myThumbnailImage = CGImageSourceCreateThumbnailAtIndex(myImageSource,
-                                                           0,
-                                                           myOptions);
-    // Release the options dictionary and the image source
-    // when you no longer need them.
-    CFRelease(thumbnailSize);
-    CFRelease(myOptions);
-    CFRelease(myImageSource);
+    NSDictionary* d = [NSDictionary dictionaryWithObjectsAndKeys:
+                       (id)kCFBooleanTrue, kCGImageSourceShouldAllowFloat,
+                       (id)kCFBooleanFalse, kCGImageSourceCreateThumbnailWithTransform,
+                       (id)kCFBooleanTrue, kCGImageSourceCreateThumbnailFromImageAlways,
+                       [NSNumber numberWithInt:size.width], kCGImageSourceThumbnailMaxPixelSize,
+                       nil];
+    thumbnail = CGImageSourceCreateThumbnailAtIndex(imageSource, 0, (__bridge CFDictionaryRef)d);
     
     // Make sure the thumbnail image exists before continuing.
-    if (myThumbnailImage == NULL){
-        fprintf(stderr, "Thumbnail image not created from image source.");
-        return NULL;
+    if (thumbnail == NULL){
+        NSLog(@"Thumbnail image not created from image source.");
+        thumbnail = NULL;
     }
     
-    return myThumbnailImage;
+    return thumbnail;
 }
 
 + (BOOL)writeImageRef:(CGImageRef)imageRef toFilepath:(NSString *)toFilepath {
