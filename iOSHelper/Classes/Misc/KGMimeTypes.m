@@ -41,6 +41,7 @@
     [mimeTypes setObject:@"bat" forKey:@"application/x-msdos-program"];
     [mimeTypes setObject:@"bmp" forKey:@"image/bmp"];
     [mimeTypes setObject:@"bz2" forKey:@"application/x-bz2"];
+    [mimeTypes setObject:@"caf" forKey:@"audio/caf"];
     [mimeTypes setObject:@"csv" forKey:@"text/csv"];
     [mimeTypes setObject:@"dmg" forKey:@"application/x-apple-diskimage"];
     [mimeTypes setObject:@"doc" forKey:@"application/msword"];
