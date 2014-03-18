@@ -31,6 +31,17 @@
 	return [UIColor colorWithRGBHex:hexNum];
 }
 
++ (UIColor *)colorWithRGBAStringSeperatedBySemicolon:(NSString *)rgbaColorString {
+    UIColor *color = nil;
+    
+    NSArray *components = [rgbaColorString componentsSeparatedByString:@";"];
+	if([components count] == 4) {
+        color = [UIColor colorWithRed:[components[0] floatValue] green:[components[1] floatValue] blue:[components[2] floatValue] alpha:[components[3] floatValue]];
+    }
+    
+    return color;
+}
+
 + (UIColor *)randomColor {
     CGFloat red = (CGFloat)((arc4random()%256)/255.0);
     CGFloat green = (CGFloat)((arc4random()%256)/255.0);

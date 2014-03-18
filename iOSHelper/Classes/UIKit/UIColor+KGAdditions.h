@@ -27,6 +27,7 @@
 
 + (UIColor *)colorWithRGBHex:(UInt32)hex;
 + (UIColor *)colorWithHexString:(NSString *)stringToConvert;
++ (UIColor *)colorWithRGBAStringSeperatedBySemicolon:(NSString *)rgbaColorString;
 + (UIColor *)randomColor;
 + (UIColor *)inverseColorToColor:(UIColor *)color;
 + (CGFloat)colorDifferenceBetweenColor:(UIColor *)color1 color:(UIColor *)color2;
