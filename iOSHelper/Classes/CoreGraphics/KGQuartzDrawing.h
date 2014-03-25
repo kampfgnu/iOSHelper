@@ -33,6 +33,13 @@
 + (CGSize)cropBoxSizeOfPDFData:(NSData *)data page:(int)page;
 + (CGSize)cropBoxSizeOfFirstPageWithPDFData:(NSData *)data;
 
-
++ (CGGradientRef)createGradientWithColors:(NSArray *)colors;
++ (CGGradientRef)createGradientWithColors:(NSArray *)colors locations:(NSArray *)locations;
++ (void)drawGradient:(CGGradientRef)gradient inRect:(CGRect)rect context:(CGContextRef)context;
++ (void)drawRoundedRect:(CGRect)rect cornerRadius:(CGFloat)cornerRadius context:(CGContextRef)context;
+/**
+ This function draws a rounded rect with iOS 5's new style of UITableViews (grouped)
+ */
++ (void)drawInsetBeveledRoundedRect:(CGRect)rect radius:(CGFloat)radius fillColor:(UIColor *)fillColor context:(CGContextRef)context;
 
 @end

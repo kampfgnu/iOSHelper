@@ -81,8 +81,40 @@
     return [UIDevice currentDevice].model;
 }
 
++ (BOOL)isCrappy {
+    static BOOL isCrappyDevice = YES;
+    
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        BOOL isSimulator = NO;
+        BOOL isIPad2 = ([KGDeviceInfo isTablet] && [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]);
+        BOOL hasRetina = [[UIScreen mainScreen] scale] > 1.f;
+        
+#if TARGET_IPHONE_SIMULATOR
+        isSimulator = YES;
+#endif
+        if (isIPad2 || hasRetina || isSimulator) {
+            isCrappyDevice = NO;
+        }
+    });
+    
+    return isCrappyDevice;
+}
+
++ (BOOL)isSimulator {
+#if TARGET_IPHONE_SIMULATOR
+    return YES;
+#else
+    return NO;
+#endif
+}
+
++ (BOOL)hasFourInchDisplay {
+    return ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone && [UIScreen mainScreen].bounds.size.height == 568.f);
+}
+
 + (void)printAll {
-    NSLog(@"ipaddress: %@, hardwarePlatform: %@, appVersion: %@, isTablet: %i, systemName: %@, iosVersion: %@, vendorId: %@, model: %@", [self ipAddress], [self hardwarePlatform], [self appVersion], [self isTablet], [self systemName], [self iosVersion], [self vendorId], [self model]);
+    NSLog(@"ipaddress: %@, hardwarePlatform: %@, appVersion: %@, isTablet: %i, systemName: %@, iosVersion: %@, vendorId: %@, model: %@, isCrappy: %i, isSimulator: %i, hasFourInchDisplay %i", [self ipAddress], [self hardwarePlatform], [self appVersion], [self isTablet], [self systemName], [self iosVersion], [self vendorId], [self model], [KGDeviceInfo isCrappy], [KGDeviceInfo isSimulator], [KGDeviceInfo hasFourInchDisplay]);
 }
 
 @end

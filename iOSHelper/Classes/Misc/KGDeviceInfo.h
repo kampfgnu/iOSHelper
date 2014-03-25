@@ -17,6 +17,9 @@
 + (NSString *)iosVersion;
 + (NSString *)vendorId;
 + (NSString *)model;
++ (BOOL)isCrappy;
++ (BOOL)isSimulator;
++ (BOOL)hasFourInchDisplay;
 
 + (void)printAll;
 
