@@ -41,6 +41,7 @@
 		02D68B651805713B00925B96 /* KGGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D68B641805713B00925B96 /* KGGradientView.m */; };
 		02E25E2218E1854F004D4C18 /* UIButton+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E25E2118E1854F004D4C18 /* UIButton+Image.m */; };
 		02E25E2518E187E1004D4C18 /* KGView.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E25E2418E187E1004D4C18 /* KGView.m */; };
+		02E25E2818E18DDC004D4C18 /* NSIndexPath+iOSHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E25E2718E18DDC004D4C18 /* NSIndexPath+iOSHelper.m */; };
 		FCE6A5D7154E7B2D0027A21A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE6A5D6154E7B2D0027A21A /* UIKit.framework */; };
 		FCE6A5D9154E7B2D0027A21A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE6A5D8154E7B2D0027A21A /* Foundation.framework */; };
 		FCE6A5DB154E7B2D0027A21A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE6A5DA154E7B2D0027A21A /* CoreGraphics.framework */; };
@@ -113,6 +114,8 @@
 		02E25E2118E1854F004D4C18 /* UIButton+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Image.m"; sourceTree = "<group>"; };
 		02E25E2318E187E1004D4C18 /* KGView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGView.h; sourceTree = "<group>"; };
 		02E25E2418E187E1004D4C18 /* KGView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGView.m; sourceTree = "<group>"; };
+		02E25E2618E18DDC004D4C18 /* NSIndexPath+iOSHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSIndexPath+iOSHelper.h"; sourceTree = "<group>"; };
+		02E25E2718E18DDC004D4C18 /* NSIndexPath+iOSHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSIndexPath+iOSHelper.m"; sourceTree = "<group>"; };
 		02F8BCB5176092CF00DDAAD5 /* KGMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KGMacros.h; sourceTree = "<group>"; };
 		FCE6A5D2154E7B2D0027A21A /* iOSHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCE6A5D6154E7B2D0027A21A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -188,6 +191,8 @@
 		0227A2A71748D7F500CA6685 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				02E25E2618E18DDC004D4C18 /* NSIndexPath+iOSHelper.h */,
+				02E25E2718E18DDC004D4C18 /* NSIndexPath+iOSHelper.m */,
 				025588CB18C60D40003AE47E /* KGMimeTypes.h */,
 				025588CC18C60D40003AE47E /* KGMimeTypes.m */,
 				0275A17817F08EBC008DFA7A /* NSURL+GETParameters.h */,
@@ -409,6 +414,7 @@
 				02E25E2218E1854F004D4C18 /* UIButton+Image.m in Sources */,
 				02E25E2518E187E1004D4C18 /* KGView.m in Sources */,
 				0214CCFC176A046700F3F304 /* NSURL+KGAdditions.m in Sources */,
+				02E25E2818E18DDC004D4C18 /* NSIndexPath+iOSHelper.m in Sources */,
 				029CF3D6176B0C7400FA607E /* UIImage+StackBlur.m in Sources */,
 				029CF3D9176B0CAB00FA607E /* UIImage+Accelerate.m in Sources */,
 				029D1FE11771A0F60032A441 /* UIImage+DSP.m in Sources */,
