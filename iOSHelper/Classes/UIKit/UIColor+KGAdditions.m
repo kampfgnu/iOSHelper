@@ -232,7 +232,7 @@
 }
 
 - (NSString *)hexStringRepresentation {
-	return [NSString stringWithFormat:@"%0.6lX", self.RGBHex];
+	return [NSString stringWithFormat:@"%0.6X", (unsigned int)self.RGBHex];
 }
 
 @end

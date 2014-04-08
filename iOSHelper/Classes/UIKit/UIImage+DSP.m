@@ -295,8 +295,8 @@ CGContextAndDataRef _dsp_utils_CreateARGBBitmapContext (CGImageRef inImage)
     
     size_t pixelsWide = CGImageGetWidth(inImage);
     size_t pixelsHigh = CGImageGetHeight(inImage);
-    bitmapBytesPerRow   = (pixelsWide * 4);
-    bitmapByteCount     = (bitmapBytesPerRow * pixelsHigh);
+    bitmapBytesPerRow   = (int)(pixelsWide * 4);
+    bitmapByteCount     = (int)(bitmapBytesPerRow * pixelsHigh);
     
     colorSpace = CGColorSpaceCreateDeviceRGB();
     if (colorSpace == NULL)

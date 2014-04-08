@@ -21,7 +21,7 @@
 - (NSString *)cacheKeyWithPrefix:(NSString *)prefix suffix:(NSString *)suffix {
     const char *str = [self.absoluteString UTF8String];
     unsigned char r[CC_MD5_DIGEST_LENGTH];
-    CC_MD5(str, strlen(str), r);
+    CC_MD5(str, (CC_LONG)strlen(str), r);
     
     if (prefix == nil) prefix = @"";
     if (suffix == nil) suffix = @"";
