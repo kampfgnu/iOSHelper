@@ -48,4 +48,6 @@
  */
 - (NSString *)firstLetter;
 
++ (NSString *)uniqueString;
+
 @end

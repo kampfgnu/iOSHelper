@@ -98,4 +98,12 @@
   return [self substringToIndex:1];
 }
 
++ (NSString *)uniqueString {
+    CFUUIDRef uuidObj = CFUUIDCreate(nil);
+	NSString *uuidString = (__bridge_transfer NSString *)CFUUIDCreateString(nil, uuidObj);
+	CFRelease(uuidObj);
+	
+	return [uuidString stringByReplacingOccurrencesOfString:@"-" withString:@""];
+}
+
 @end
