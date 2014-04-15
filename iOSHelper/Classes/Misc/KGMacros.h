@@ -13,3 +13,15 @@
 #define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
 
 #define _(key)	NSLocalizedString(key, key)
+
+// Use like this:
+// + (id)sharedInstance {
+//  KGDefineSingletonUsingBlock(^{
+//    return [[self alloc] init];
+//  });
+// }
+#define KGDefineSingletonUsingBlock(block) \
+static dispatch_once_t pred; \
+__strong static id sharedObject_ = nil; \
+dispatch_once(&pred, ^{ sharedObject_ = block(); }); \
+return sharedObject_;
