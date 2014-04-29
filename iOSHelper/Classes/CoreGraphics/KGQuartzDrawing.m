@@ -52,10 +52,10 @@
 + (void)drawHorizontalSeparatorLineAtPosition:(CGPoint)position width:(CGFloat)width {
 	[KGQuartzDrawing drawHorizontalLineAtPosition:position width:width color:[UIColor blackColor]];
 	position.y += 1;
-	[KGQuartzDrawing drawHorizontalLineAtPosition:position width:width color:[UIColor colorWithRGBHex:0x687080]];	
+	[KGQuartzDrawing drawHorizontalLineAtPosition:position width:width color:[UIColor colorWithRGBHex:0x687080]];
 }
 
-+ (void)drawVerticalSeparatorLineAtPosition:(CGPoint)position height:(CGFloat)height {	
++ (void)drawVerticalSeparatorLineAtPosition:(CGPoint)position height:(CGFloat)height {
 	[KGQuartzDrawing drawVerticalLineAtPosition:position height:height color:[UIColor colorWithRGBHex:0x687080]];
 	position.x += 1;
 	[KGQuartzDrawing drawVerticalLineAtPosition:position height:height color:[UIColor blackColor]];
@@ -98,16 +98,26 @@
 
 + (BOOL)writeThumbnailOfImageAtFilepath:(NSString *)filepath toFilepath:(NSString *)toFilepath size:(CGSize)size {
     CGImageRef imageRef = [KGQuartzDrawing thumbImageRefFromImageAtFilepath:filepath size:size];
-    return [KGQuartzDrawing writeImageRef:imageRef toFilepath:toFilepath];
+    BOOL success = [KGQuartzDrawing writeImageRef:imageRef toFilepath:toFilepath];
+    CGImageRelease(imageRef);
+    
+    return success;
 }
 
 + (BOOL)writeThumbnailOfImageData:(NSData *)data toFilepath:(NSString *)toFilepath size:(CGSize)size {
     CGImageRef imageRef = [KGQuartzDrawing thumbImageRefFromImageData:data size:size];
-    return [KGQuartzDrawing writeImageRef:imageRef toFilepath:toFilepath];
+    BOOL success = [KGQuartzDrawing writeImageRef:imageRef toFilepath:toFilepath];
+    CGImageRelease(imageRef);
+    
+    return success;
 }
 
 + (UIImage *)thumbnailOfImageAtFilepath:(NSString *)filepath size:(CGSize)size {
-    return [UIImage imageWithCGImage:[KGQuartzDrawing thumbImageRefFromImageAtFilepath:filepath size:size]];
+    CGImageRef imageRef = [KGQuartzDrawing thumbImageRefFromImageAtFilepath:filepath size:size];
+    UIImage *image = [UIImage imageWithCGImage:imageRef];
+    CGImageRelease(imageRef);
+    
+    return image;
 }
 
 + (CGImageRef)thumbImageRefFromImageAtFilepath:(NSString *)filepath size:(CGSize)size {
@@ -215,8 +225,8 @@
     CGContextConcatCTM(context, CGPDFPageGetDrawingTransform(page, kCGPDFCropBox, pageRect, 0, true));
     
     CGContextDrawPDFPage(context, page);
-//    CGContextSetInterpolationQuality(context, kCGInterpolationHigh);
-//    CGContextSetRenderingIntent(context, kCGRenderingIntentDefault);
+    //    CGContextSetInterpolationQuality(context, kCGInterpolationHigh);
+    //    CGContextSetRenderingIntent(context, kCGRenderingIntentDefault);
     
     CGContextRestoreGState(context);
     
@@ -238,10 +248,17 @@
     CGPDFDocumentRef docRef = CGPDFDocumentCreateWithProvider(dataProv);
     CGDataProviderRelease(dataProv);
     
-    CGPDFPageRef pageRef = CGPDFDocumentGetPage(docRef, page);
-    CGSize size = [self cropBoxSizeOfCGPDFPageRef:pageRef];
-    
-    CGPDFDocumentRelease(docRef);
+    CGSize size = CGSizeZero;
+    if (docRef != NULL) {
+        CGPDFPageRef pageRef = CGPDFDocumentGetPage(docRef, page);
+        
+        if (pageRef != NULL) {
+            size = [self cropBoxSizeOfCGPDFPageRef:pageRef];
+//            CGPDFPageRelease(pageRef);
+        }
+        
+        CGPDFDocumentRelease(docRef);
+    }
     
     return size;
 }

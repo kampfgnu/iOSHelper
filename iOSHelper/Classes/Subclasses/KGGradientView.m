@@ -23,7 +23,7 @@
             [_colors addObject:(id)c.CGColor];
         }
         
-        _locations = malloc(locations.count * sizeof(float));
+        _locations = malloc(locations.count * sizeof(CGFloat));
         for (int i = 0; i < locations.count; i++) {
             NSNumber *n = locations[i];
             _locations[i] = [n floatValue];
@@ -40,6 +40,7 @@
     
 //    CGFloat gradientLocations[] = {0, 1};
     CGGradientRef gradient = CGGradientCreateWithColors(colorSpace, (__bridge CFArrayRef)_colors, _locations);
+    CGColorSpaceRelease(colorSpace);
     
     CGPoint startPoint = CGPointMake(CGRectGetMidX(rect), CGRectGetMinY(rect));
     CGPoint endPoint = CGPointMake(CGRectGetMidX(rect), CGRectGetMaxY(rect));
