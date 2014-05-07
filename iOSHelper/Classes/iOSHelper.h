@@ -17,8 +17,6 @@
 #import "UIView+KGAnimations.h"
 #import "UIView+KGAutoresizing.h"
 #import "UIView+KGHierarchy.h"
-#import "UIView+KGInnerShadow.h"
-#import "UIView+KGNoise.h"
 #import "UIView+Userdata.h"
 #import "KGQuartzDrawing.h"
 #import "NSURL+KGAdditions.h"
@@ -26,3 +24,4 @@
 #import "UIImage+Accelerate.h"
 #import "UIImage+Dsp.h"
 #import "NSURL+GETParameters.h"
+#import "KGDeviceInfo.h"
