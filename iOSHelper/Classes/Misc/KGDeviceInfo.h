@@ -20,6 +20,7 @@
 + (BOOL)isCrappy;
 + (BOOL)isSimulator;
 + (BOOL)hasFourInchDisplay;
++ (NSString *)currentLanguage;
 
 + (void)printAll;
 

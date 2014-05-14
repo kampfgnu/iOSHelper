@@ -113,6 +113,16 @@
     return ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone && [UIScreen mainScreen].bounds.size.height == 568.f);
 }
 
++ (NSString *)currentLanguage {
+    NSString *language = [NSLocale preferredLanguages][0];
+    if (! [[[NSBundle mainBundle] localizations] containsObject:language]) {
+        //set to fallback (english) language
+        language = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDevelopmentRegion"];
+    }
+    
+    return language;
+}
+
 + (void)printAll {
     NSLog(@"ipaddress: %@, hardwarePlatform: %@, appVersion: %@, isTablet: %i, systemName: %@, iosVersion: %@, vendorId: %@, model: %@, isCrappy: %i, isSimulator: %i, hasFourInchDisplay %i", [self ipAddress], [self hardwarePlatform], [self appVersion], [self isTablet], [self systemName], [self iosVersion], [self vendorId], [self model], [KGDeviceInfo isCrappy], [KGDeviceInfo isSimulator], [KGDeviceInfo hasFourInchDisplay]);
 }
