@@ -123,6 +123,10 @@
     return language;
 }
 
++ (BOOL)hasRetina {
+    return [[UIScreen mainScreen] scale] > 1.f;
+}
+
 + (void)printAll {
     NSLog(@"ipaddress: %@, hardwarePlatform: %@, appVersion: %@, isTablet: %i, systemName: %@, iosVersion: %@, vendorId: %@, model: %@, isCrappy: %i, isSimulator: %i, hasFourInchDisplay %i", [self ipAddress], [self hardwarePlatform], [self appVersion], [self isTablet], [self systemName], [self iosVersion], [self vendorId], [self model], [KGDeviceInfo isCrappy], [KGDeviceInfo isSimulator], [KGDeviceInfo hasFourInchDisplay]);
 }

@@ -21,6 +21,7 @@
 + (BOOL)isSimulator;
 + (BOOL)hasFourInchDisplay;
 + (NSString *)currentLanguage;
++ (BOOL)hasRetina;
 
 + (void)printAll;
 

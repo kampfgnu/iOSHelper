@@ -143,6 +143,10 @@ NS_INLINE CGFloat KGZoomScaleThatFits(CGSize target, CGSize source) {
     }
 }
 
+NS_INLINE CGSize KGScaleSize(CGSize size, CGFloat scale) {
+    return CGSizeMake(size.width * scale, size.height *scale);
+}
+
 ////////////////////////////////////////////////////////////////////////
 #pragma mark - CGPoint Helper
 ////////////////////////////////////////////////////////////////////////
