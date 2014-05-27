@@ -106,4 +106,13 @@
 	return [uuidString stringByReplacingOccurrencesOfString:@"-" withString:@""];
 }
 
++ (NSString *)addSuffix:(NSString *)suffix toString:(NSString *)string {
+    NSString *extension = [string pathExtension];
+    if (extension == nil) extension = @"";
+    else extension = [@"." stringByAppendingString:extension];
+    
+    NSString *suffixWithExtension = [NSString stringWithFormat:@"%@%@", suffix, extension];
+    return [string stringByReplacingOccurrencesOfString:extension withString:suffixWithExtension];
+}
+
 @end

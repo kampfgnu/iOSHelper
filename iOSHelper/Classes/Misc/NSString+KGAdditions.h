@@ -50,4 +50,9 @@
 
 + (NSString *)uniqueString;
 
+/**
+ Inserts the given suffix before the filenameextension (e.g. suffix = "_blah", string = "hello.jpg", output: "hello_blah.jpg"
+ */
++ (NSString *)addSuffix:(NSString *)suffix toString:(NSString *)string;
+
 @end
