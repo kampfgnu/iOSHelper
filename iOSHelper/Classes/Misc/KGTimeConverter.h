@@ -31,6 +31,7 @@ typedef enum {
 
 - (NSString *)timeString;
 
+@property (nonatomic, strong) NSNumber *number;
 @property (nonatomic, readwrite) KGTimeUnit timeUnit;
 @property (nonatomic, readwrite) KGTimeFormat timeFormat;
 
