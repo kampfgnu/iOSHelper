@@ -18,6 +18,7 @@
 - (BOOL)containsString:(NSString *)string;
 - (BOOL)containsString:(NSString *)string options:(NSStringCompareOptions)options;
 - (BOOL)isEqualToStringIgnoringCase:(NSString*)otherString;
+- (NSString *)stringBetweenString:(NSString*)start andString:(NSString*)end;
 
 /**
  Replaces all occurences of two or more spaces in a row with one space, 
